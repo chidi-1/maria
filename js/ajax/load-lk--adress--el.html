@@ -1,0 +1,22 @@
+
+    <span class="title">Адрес №</span>
+    <select name="region" class="js--select-styled">
+        <option value="" selected disabled>Выберите регион доставки</option>
+        <option value="Регион1">Регион 1</option>
+        <option value="Регион2">Регион 2</option>
+        <option value="Регион3">Регион 3</option>
+    </select>
+
+    <div class="flex-between">
+        <input type="text" name="town" placeholder="Город" class="inp inp-m required">
+        <input type="text" name="street" placeholder="Улица" class="inp inp-m required">
+    </div>
+    <div class="flex-between">
+        <input type="text" name="home" placeholder="Дом" class="inp required inp-s">
+        <input type="text" name="housing" placeholder="Корпус/строение" class="inp inp-s">
+        <input type="text" name="flat" placeholder="Квартира" class="inp inp-s">
+    </div>
+
+    <script>
+        add_adress();
+    </script>
