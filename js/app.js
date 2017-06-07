@@ -174,6 +174,17 @@ $(document).on('click', '.js--open-history-list', function () {
     return false;
 })
 
+$(document).on('click', '.brends-list li img', function(){
+    var el = $(this).closest('li');
+
+    if(el.hasClass('active')){
+        el.removeClass('active');
+    }
+    else{
+        $('.brends-list li').removeClass('active');
+        el.addClass('active');
+    }
+})
 var timeout_link; // задержка при вводе в поле
 
 // удалить позицию из корзины
@@ -253,11 +264,11 @@ $(document).on('keydown', '.inp-number', function () {
 var input_number = function () {
     var allow_meta_keys = [86, 67, 65];
     if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 110 || event.keyCode == 191 ||
-        // Разрешаем: Ctrl+A
+            // Разрешаем: Ctrl+A
         ($.inArray(event.keyCode, allow_meta_keys) > -1 && (event.ctrlKey === true || event.metaKey === true)) ||
-        // Разрешаем: home, end, влево, вправо
+            // Разрешаем: home, end, влево, вправо
         (event.keyCode >= 35 && event.keyCode <= 39)) {
-            return
+        return
     }
     else {
         // Обеждаемся, что это цифра, и останавливаем событие keypress
@@ -268,7 +279,7 @@ var input_number = function () {
 };
 
 // ввод количества с клавиатуры
-$(document).on('input', '.cart-list .cart-list--amount .inp-number', function () {
+$(document).on('input', '.inp-number', function () {
     var input = $(this);
 
     if (input.data("lastval") != input.val()) {
@@ -289,13 +300,15 @@ $(document).on('input', '.cart-list .cart-list--amount .inp-number', function ()
         }
         input.data("lastval", input.val());
 
-        if (timeout_link) {
-            clearTimeout(timeout_link)
-        }
-        timeout_link = setTimeout(function () {
-            change_basket(input.closest('li'));
-        }, 250)
 
+        if (input.parents().hasClass('cart-list--amount')) {
+            if (timeout_link) {
+                clearTimeout(timeout_link)
+            }
+            timeout_link = setTimeout(function () {
+                change_basket(input.closest('li'));
+            }, 250)
+        }
     }
 });
 
@@ -346,15 +359,63 @@ $(document).on('click', '.js--open-history-list', function () {
 })
 
 $(document).ready(function () {
+    var timeout_link
+
     if ($('.js--select-styled').length) {
         $('.js--select-styled').styler({
             onFormStyled: function () {
-                console.log($(this).parents().hasClass('new-adress'));
                 $(this).css('outline', '3px solid red');
+            },
+            onSelectClosed: function () {
+                if ($(this).closest('form').hasClass('filter-form')) {
+                    if (timeout_link) {
+                        clearTimeout(timeout_link)
+                    }
+                    timeout_link = setTimeout(function () {
+                        set_filter();
+                    }, 1000)
+                }
             }
         });
+    };
+
+    if ($('.slider').length) {
+        $(".slider").each(function () {
+            var slider = $(this);
+            var min = slider.data('min');
+            var max = slider.data('max');
+            var current = slider.data('current');
+            var range = slider.data('range');
+
+            slider.slider({
+                range: range,
+                min: min,
+                max: max,
+                value: current,
+                create: function () {
+                    $(this).closest('.slider-wrap').find('.value').text($(this).slider("value") + ' руб.');
+                },
+                slide: function (event, ui) {
+                    $(this).closest('.slider-wrap').find('.value').text($(this).slider("value") + ' руб.');
+                    if (timeout_link) {
+                        clearTimeout(timeout_link)
+                    }
+                    timeout_link = setTimeout(function () {
+                        set_filter();
+                    }, 1000)
+                }
+            });
+        })
     }
-    ;
+
+    $('.filter-form input').change(function () {
+        if (timeout_link) {
+            clearTimeout(timeout_link)
+        }
+        timeout_link = setTimeout(function () {
+            set_filter();
+        }, 1000)
+    })
 
     $('.js--open-dropdown').click(function () {
         if ($('.dropdown-wrap.open').length && !($(this).closest('.dropdown-wrap').hasClass('open'))) {
@@ -377,6 +438,11 @@ $(document).ready(function () {
         if (!(target.parents().hasClass('dropdown-wrap'))) {
             $('.dropdown-wrap.open').removeClass('open');
         }
+        if (!(target.parents().hasClass('brends-list'))) {
+            $('.brends-list li').removeClass('active');
+        }
+
+
     });
 
     var window_width = $(window).width();
@@ -493,7 +559,7 @@ $(document).ready(function () {
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
             items: 1,
-            responsive : {
+            responsive: {
                 0: {
                     items: 1,
                     margin: 0
@@ -510,6 +576,102 @@ $(document).ready(function () {
                 },
                 1270: {
                     items: 5
+                }
+            }
+        });
+    }
+
+    if ($('.slider-discount').length) {
+        $('.slider-discount').owlCarousel({
+            margin: 10,
+            loop: true,
+            nav: false,
+            dots: true,
+            navText: [,],
+            autoplay: false,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            items: 1,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 0
+                },
+                480: {
+                    items: 2,
+                    margin: 15
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 3
+                },
+                1270: {
+                    items: 3
+                }
+            }
+        });
+    }
+
+    if ($('.slider-item').length) {
+        $('.slider-item').owlCarousel({
+            margin: 0,
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: [,],
+            autoplay: false,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            items: 1,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 0
+                },
+                480: {
+                    items: 2
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1270: {
+                    items: 4
+                }
+            }
+        });
+    }
+
+    if ($('.trends-slider').length) {
+        $('.trends-slider').owlCarousel({
+            margin: 10,
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: [,],
+            autoplay: false,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            items: 2,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                480: {
+                    items: 3
+                },
+                768: {
+                    items:4
+                },
+                992: {
+                    items: 5
+                },
+                1270: {
+                    items: 6
                 }
             }
         });
@@ -593,7 +755,7 @@ $(document).ready(function () {
     });
 
     if ($('#about-map').length) {
-        var icon = $('#about-map').data('img')
+        var icon = $('#about-map').data('img');
 
         ymaps.ready(function () {
             var myMap = new ymaps.Map('about-map', {
@@ -614,10 +776,122 @@ $(document).ready(function () {
         });
     }
 
-    $('.js--close-contacts').click(function(){
+    $('.js--close-contacts').click(function () {
         $(this).closest('.map--contacts').fadeOut();
-    })
+    });
 
+    if ($('.accordeon').length) {
+
+        $('.acc__container').hide();
+        $('.acc__trigger:first').addClass('active').next().show();
+
+        $('.acc__trigger').click(function () {
+            if ($(this).next().is(':hidden')) {
+                $('.acc__trigger').removeClass('active').next().slideUp();
+                $(this).toggleClass('active').next().slideDown();
+            }
+            return false;
+        });
+    }
+
+    $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    if ($('.nano').length) {
+        $('.nano').mCustomScrollbar({
+            theme: "minimal"
+        });
+    }
+});
+
+function set_filter() {
+    var form = $('.filter-form');
+    var url = form.attr('action');
+    var method = form.attr('method');
+    var data = form.serialize();
+
+    $.ajax({
+        url: url,
+        method: method,
+        data: data,
+        success: function (data) {
+            var parse_data = jQuery.parseJSON(data);
+            $('.catalog .load-container').empty().html(parse_data.header_html);
+        }
+    });
+
+    return false;
+}
+// удалить дисконтную карту
+$(document).on('click', '.js--lk-remove-discount', function () {
+    var btn = $(this);
+    var url = btn.data('url');
+    var method = btn.data('method');
+    var id = btn.data('id');
+    var block = btn.closest('.lk--discount-added--el');
+
+    $.ajax({
+        url: url,
+        method: method,
+        data: {id: id},
+        success: function () {
+            console.log('11')
+            block.remove();
+        }
+    });
+
+    return false;
+});
+
+var index_load_adres;
+
+// Добавить адрес доставки
+$(document).on('click', '.js--add-adress', function () {
+    var btn = $(this);
+    var url = btn.data('url');
+
+    btn.prev().append('<div class="lk--adress--el"></div>');
+    var block = btn.prev().find('.lk--adress--el:last-child');
+    block.load(btn.data('url'));
+    index_load_adres = btn.prev().find('.lk--adress--el').length;
+
+    return false;
+});
+
+function add_adress() {
+    $('.js--select-styled').styler();
+    var block = $('.lk--adress--el:last-child');
+    block.find('span.title').text(block.find('span.title').text() + index_load_adres);
+    var name = block.find('select').attr('name');
+    block.find('select').attr('name', name + index_load_adres);
+    block.find('.inp').each(function () {
+        var name = $(this).attr('name');
+        $(this).attr('name', name + index_load_adres);
+    })
+}
+
+$(document).on('click', '.js--minus', function () {
+    return false;
+});
+
+$(document).on('click', '.item--params-btns-value .btn', function () {
+    var current_value = $(this).closest('.item--params-btns-value').find('input').prop('value');
+    if ($(this).hasClass('js--minus') == true && current_value == 1) {
+        return false
+    } else {
+        current_value = current_value.replace(/\s+/g, '');
+        current_value = Number(current_value);
+        ($(this).hasClass('js--minus') == true) ? (current_value--) : (current_value++);
+        current_value = current_value.toString();
+        current_value = number_format(current_value);
+        $(this).closest('.item--params-btns-value').find('input').prop('value', current_value);
+        /*count();*/
+    }
+
+    return false;
 });
 // удалить дисконтную карту
 $(document).on('click', '.js--lk-remove-discount', function () {

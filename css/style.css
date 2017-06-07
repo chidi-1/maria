@@ -158,6 +158,9 @@ body {
   min-width: 320px;
   overflow: hidden;
 }
+.page-wrap.decor {
+  background: url("../img/bg--header.png") no-repeat 50% 0;
+}
 form,
 p,
 ul,
@@ -335,6 +338,9 @@ h3 {
   h3 {
     font-size: 20px;
   }
+}
+h3 span {
+  font: inherit;
 }
 .btn {
   display: block;
@@ -5620,6 +5626,1516 @@ input[type='submit'].styler[disabled] {
   background: #000;
   background: rgba(0,0,0,0.8);
 }
+.mCustomScrollbar {
+  -ms-touch-action: pinch-zoom;
+  touch-action: pinch-zoom;
+}
+.mCustomScrollbar.mCS_no_scrollbar,
+.mCustomScrollbar.mCS_touch_action {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+.mCustomScrollBox {
+/* contains plugin's markup */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: none;
+  direction: ltr;
+}
+.mCSB_container {
+/* contains the original content */
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 30px;
+}
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container {
+/* RTL direction/left-side scrollbar */
+  margin-right: 0;
+  margin-left: 30px;
+}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-left: 0;
+}
+.mCSB_scrollTools {
+/* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+  position: absolute;
+  width: 16px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.mCSB_outside + .mCSB_scrollTools {
+  right: -26px;
+}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+/* RTL direction/left-side scrollbar */
+  right: auto;
+  left: 0;
+}
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  left: -26px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer {
+/* contains the draggable element and dragger rail markup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 20px 0;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+.mCSB_scrollTools .mCSB_dragger {
+/* the draggable element */
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+/* the dragger element */
+  position: relative;
+  width: 4px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
+  text-align: center;
+}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 12px;
+}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 8px;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown {
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown {
+  bottom: 0;
+}
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.mCSB_horizontal.mCSB_outside > .mCSB_container {
+  min-height: 100%;
+}
+.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  width: auto;
+  height: 16px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: -26px;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+  margin: 0 20px;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 30px;
+  height: 100%;
+  left: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  margin: 2px auto;
+}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 8px;
+  margin: 4px 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+  left: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  right: 0;
+}
+.mCSB_container_wrapper {
+  position: absolute;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.mCSB_container_wrapper > .mCSB_container {
+  padding-right: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 20px;
+}
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 20px;
+}
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 0;
+}
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 0;
+}
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 20px;
+}
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 0;
+}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper {
+/* RTL direction/left-side scrollbar */
+  margin-right: 0;
+  margin-left: 30px;
+}
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container {
+  padding-right: 0;
+}
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container {
+  padding-bottom: 0;
+}
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+  margin-left: 0;
+}
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight {
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.mCSB_scrollTools {
+  opacity: 0.75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 0;
+  filter: "alpha(opacity=0)";
+  -ms-filter: "alpha(opacity=0)";
+}
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollBox:hover > .mCSB_scrollTools,
+.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=100)";
+  -ms-filter: "alpha(opacity=100)";
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.4);
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.85);
+  filter: "alpha(opacity=85)";
+  -ms-filter: "alpha(opacity=85)";
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight {
+  background-image: url("mCSB_buttons.png");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 0;
+/* 
+  sprites locations 
+  light 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
+  dark -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
+  */
+}
+.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -20px;
+/* 
+  sprites locations
+  light 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
+  dark -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
+  */
+}
+.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -40px;
+/* 
+  sprites locations 
+  light 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
+  dark -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
+  */
+}
+.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -56px;
+/* 
+  sprites locations 
+  light 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
+  dark -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
+  */
+}
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover {
+  opacity: 0.75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active {
+  opacity: 0.9;
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.15);
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 1px;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 1px;
+}
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.85);
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px 0;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -20px;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -40px;
+}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -56px;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 1px;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 1px;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px 0;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -20px;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -40px;
+}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -56px;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 2px;
+}
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 4px;
+  margin: 6px 0;
+}
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 6px;
+  margin: 5px auto;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.85);
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px 0;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -20px;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -40px;
+}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -56px;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 2px;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px 0;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -20px;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -40px;
+}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -56px;
+}
+.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.1);
+}
+.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 2px;
+}
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+}
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 2px;
+  margin: 7px auto;
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.15);
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.15);
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger {
+  height: 14px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 14px;
+  margin: 0 1px;
+}
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 14px;
+}
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 14px;
+  margin: 1px 0;
+}
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 16px;
+  height: 16px;
+  margin: -1px 0;
+}
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 4px;
+}
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 16px;
+  width: 16px;
+  margin: 0 -1px;
+}
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 4px;
+  margin: 6px 0;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 -72px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -92px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -112px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -128px;
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.15);
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px -72px;
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -92px;
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -112px;
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -128px;
+}
+.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail {
+  width: 4px;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  background-color: transparent;
+  background-position: center;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url("data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==");
+  background-repeat: repeat-y;
+  opacity: 0.3;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  height: 4px;
+  margin: 6px 0;
+  background-repeat: repeat-x;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px -72px;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -92px;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -112px;
+}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -128px;
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url("data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=");
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px -72px;
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -92px;
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -112px;
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -128px;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-y;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+}
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+}
+.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger,
+.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 70px;
+}
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 70px;
+}
+.mCS-3d.mCSB_scrollTools,
+.mCS-3d-dark.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 16px;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  width: 8px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
+  box-shadow: inset 1px 0 1px rgba(0,0,0,0.5), inset -1px 0 1px rgba(255,255,255,0.2);
+}
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #555;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 8px;
+}
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 8px;
+  margin: 4px 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5), inset 0 -1px 1px rgba(255,255,255,0.2);
+}
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 8px;
+  margin: 4px auto;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.mCS-3d.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+  box-shadow: inset 1px 0 1px rgba(0,0,0,0.1);
+}
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.mCS-3d-thick.mCSB_scrollTools,
+.mCS-3d-thick-dark.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.mCS-3d-thick.mCSB_scrollTools,
+.mCS-3d-thick-dark.mCSB_scrollTools,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+  border-radius: 7px;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 5px;
+}
+.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical,
+.mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+  right: 1px;
+}
+.mCS-3d-thick.mCSB_scrollTools_vertical,
+.mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+  box-shadow: inset 1px 0 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);
+}
+.mCS-3d-thick.mCSB_scrollTools_horizontal,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+  bottom: 1px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.4);
+  width: 12px;
+  margin: 2px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #555;
+}
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  width: auto;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.05);
+  box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools {
+  box-shadow: inset 0 0 14px rgba(0,0,0,0.2);
+}
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.2);
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.2);
+}
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.2);
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #777;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #fff;
+  background-color: rgba(0,0,0,0.05);
+  box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  right: 0;
+  margin: 12px 0;
+}
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: 0;
+  margin: 0 12px;
+}
+.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+.mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  left: 0;
+  right: auto;
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 50px;
+}
+.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 50px;
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+  width: 6px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+}
+.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 6px;
+  margin: 5px 0;
+}
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 12px;
+}
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 12px;
+  margin: 2px 0;
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.mCS-inset.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  width: 12px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
+}
+.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  margin: 3px 5px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 6px;
+  margin: 5px 3px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 12px;
+  margin: 2px 0;
+}
+.mCS-inset.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.mCS-inset.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.mCS-inset.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-color: rgba(255,255,255,0.2);
+  box-sizing: border-box;
+}
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+  border-color: #000;
+  border-color: rgba(0,0,0,0.2);
+}
+.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.6);
+}
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.6);
+}
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+}
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.85);
+}
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
+}
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
+}
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.85);
+}
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+}
+/*
+ * jQuery UI CSS Framework 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+.ui-helper-hidden {
+  display: none;
+}
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+  clear: both;
+}
+.ui-helper-clearfix {
+  min-height: 0;
+}
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(0);
+}
+.ui-front {
+  z-index: 100;
+}
+.ui-state-disabled {
+  cursor: default !important;
+}
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+.ui-slider-horizontal {
+  height: 0.8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.ui-slider-vertical {
+  width: 0.8em;
+  height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.3em;
+  margin-left: 0;
+  margin-bottom: -0.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
+/*
+ * jQuery UI CSS Framework 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+.ui-helper-hidden {
+  display: none;
+}
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+  clear: both;
+}
+.ui-helper-clearfix {
+  min-height: 0;
+}
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(0);
+}
+.ui-front {
+  z-index: 100;
+}
+.ui-state-disabled {
+  cursor: default !important;
+}
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+.ui-slider-horizontal {
+  height: 0.8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.ui-slider-vertical {
+  width: 0.8em;
+  height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.3em;
+  margin-left: 0;
+  margin-bottom: -0.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
 .header {
   position: absolute;
   left: 0;
@@ -6185,6 +7701,102 @@ input[type='submit'].styler[disabled] {
 .header--bottom ul .dropdown li a:hover {
   text-decoration: underline;
 }
+.footer {
+  padding: 45px 0 55px 0;
+  background-color: #3f4954;
+}
+.footer span,
+.footer a,
+.footer p {
+  color: #fff;
+}
+.footer .width-wrap {
+  padding: 0 20px;
+}
+.footer .col-sm-4 {
+  width: 33.3%;
+}
+.footer .footer__col1 {
+  padding-top: 10px;
+}
+.footer .footer__col1 p.address {
+  font-size: 13px;
+  margin-bottom: 37px;
+  color: #ccced1;
+}
+.footer .tels-block .footer__tel {
+  display: block;
+  margin: 5px;
+}
+.footer .tels-block .footer__tel a {
+  font-size: 24px;
+  font-family: ubuntu-medium, sans-serif;
+}
+.footer .tels-block .footer__tel span {
+  font-size: 13px;
+  color: #ccced1;
+  margin-left: 21px;
+}
+.footer .footer__col2 .sprite-call {
+  background: url("../img/spritesheet.png") no-repeat -534px -21px;
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin: 0 auto;
+}
+.footer .footer__col2 .footer__tel {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer .footer__col2 .footer__tel span {
+  display: block;
+}
+.footer .footer__col2 .developed-by {
+  display: block;
+  text-align: center;
+}
+.footer .footer__col3 .socials-list {
+  text-align: right;
+  margin-bottom: 30px;
+}
+.footer .footer__col3 .socials-list li {
+  margin-left: 40px;
+}
+.footer .footer__col3 .socials-list li a {
+  display: block;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-fb {
+  width: 19px;
+  height: 31px;
+  background: url("../img/spritesheet.png") no-repeat -140px -319px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-fb:hover {
+  background-position: -201px -319px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-tw {
+  width: 33px;
+  height: 28px;
+  background: url("../img/spritesheet.png") no-repeat -872px -216px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-tw:hover {
+  background-position: -688px -446px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-vk {
+  width: 39px;
+  height: 27px;
+  background: url("../img/spritesheet.png") no-repeat -763px -446px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-vk:hover {
+  background-position: -844px -446px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-in {
+  width: 29px;
+  height: 29px;
+  background: url("../img/spritesheet.png") no-repeat -533px -459px;
+}
+.footer .footer__col3 .socials-list li a.socials-list__el-in:hover {
+  background-position: -604px -459px;
+}
 .dropdown-wrap .dropdown {
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -6337,6 +7949,373 @@ input[type='submit'].styler[disabled] {
 .breadcrumbs li span {
   color: #0477c2;
 }
+.tabs__caption {
+  margin-left: -25px;
+}
+.tabs__caption li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 25px;
+  height: 68px;
+  line-height: 60px;
+  font-weight: bold;
+  color: #3f4954;
+  cursor: pointer;
+  min-width: 201px;
+  text-align: center;
+}
+.tabs__caption li:before {
+  display: none;
+}
+.tabs__caption li.active {
+  background: url("../img/bg--tab-active.png") no-repeat 50% 50%;
+  cursor: default;
+}
+.tabs__content {
+  display: none;
+}
+.tabs__content.active {
+  display: block;
+}
+.stars {
+  display: block;
+}
+.stars li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background: url("../img/spritesheet.png") no-repeat -756px -217px;
+}
+.stars li.active {
+  background: url("../img/spritesheet.png") no-repeat -815px -217px;
+}
+.slider-discount {
+  margin: 0 10px;
+  display: block;
+  width: auto;
+  position: relative;
+  padding-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .slider-discount {
+    width: auto;
+    margin: 0 10px;
+  }
+}
+.slider-discount__el {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  vertical-align: top;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  width: 100%;
+  height: 18vw;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px;
+}
+.slider-discount__el img {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: auto !important;
+  height: 100%;
+  z-index: 5;
+}
+.slider-discount__el .content {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 250px;
+  margin-right: 35px;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 1270px) {
+  .slider-discount__el .content {
+    max-width: 150px;
+  }
+}
+.slider-discount__el .content span {
+  display: block;
+}
+.slider-discount__el .content span.text-right {
+  font-weight: lighter;
+}
+.slider-discount__el .content span.name {
+  font-size: 72px;
+  line-height: 50px;
+  font-family: ttlimesslab;
+  margin-bottom: 20px;
+}
+@media (max-width: 1270px) {
+  .slider-discount__el .content span.name {
+    font-size: 50px;
+  }
+}
+.slider-discount__el .content .decor-left {
+  text-align: right;
+}
+.slider-discount__el .content .decor-left span {
+  display: inline;
+  padding-left: 30px;
+}
+.slider-discount__el .content .decor-left span:before {
+  top: 18px;
+}
+.slider-discount__el.slider-discount__el-beige {
+  background: #faede3;
+}
+.slider-discount__el.slider-discount__el-beige span.name {
+  color: #26a9ac;
+}
+.slider-discount__el.slider-discount__el-beige .decor-left span:before {
+  background: url("../img/decor--left-1.png") no-repeat 0 0;
+}
+.slider-discount__el.slider-discount__el-blue {
+  background: #f0f2f8;
+}
+.slider-discount__el.slider-discount__el-blue span.name {
+  color: #89c0a5;
+}
+.slider-discount__el.slider-discount__el-blue .decor-left span:before {
+  background: url("../img/decor--left-2.png") no-repeat 0 0;
+}
+.slider-discount__el.slider-discount__el-brown {
+  background: #ebe0e3;
+}
+.slider-discount__el.slider-discount__el-brown span.name {
+  color: #778b6d;
+}
+@media (max-width: 1270px) {
+  .slider-discount__el.slider-discount__el-brown span.name {
+    text-align: right;
+  }
+}
+.slider-discount__el.slider-discount__el-brown .decor-left span:before {
+  background: url("../img/decor--left-3.png") no-repeat 0 0;
+}
+.slider-discount .owl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition: none;
+  margin-left: 0;
+  text-align: center;
+}
+@media (max-width: 1270px) {
+  .slider-discount .owl-dots {
+    width: 30%;
+  }
+}
+.slider-discount .owl-dots .owl-dot {
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 3px solid #a8b6c6;
+  opacity: 0.5;
+  margin: 0 14px;
+}
+.slider-discount .owl-dots .owl-dot.active {
+  background: #a8b6c6;
+}
+.catalog-item,
+.slider-item {
+  height: 515px;
+  position: relative;
+}
+.catalog-item .slider-item__el,
+.slider-item .slider-item__el {
+  border: 1px solid #c9cbce;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: #3f4954;
+  width: 290px;
+  height: 455px;
+  padding: 55px 10px 10px 10px;
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+}
+.catalog-item .slider-item__el:hover,
+.slider-item .slider-item__el:hover {
+  height: 515px;
+}
+.catalog-item .slider-item__el:hover .slider-item__el-links,
+.slider-item .slider-item__el:hover .slider-item__el-links {
+  opacity: 1;
+}
+.catalog-item .slider-item__el:hover .slider-item__el-discount:hover:before,
+.slider-item .slider-item__el:hover .slider-item__el-discount:hover:before {
+  opacity: 0;
+}
+.catalog-item .slider-item__el:hover .slider-item__el-discount:hover:after,
+.slider-item .slider-item__el:hover .slider-item__el-discount:hover:after {
+  opacity: 1;
+}
+.catalog-item .slider-item__el img,
+.slider-item .slider-item__el img {
+  width: auto !important;
+}
+.catalog-item .slider-item__el-discount,
+.slider-item .slider-item__el-discount {
+  padding-top: 15px;
+  padding-right: 15px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 103px;
+  height: 87px;
+  z-index: 10;
+}
+.catalog-item .slider-item__el-discount:before,
+.slider-item .slider-item__el-discount:before,
+.catalog-item .slider-item__el-discount:after,
+.slider-item .slider-item__el-discount:after {
+  position: absolute;
+  content: "";
+  width: 103px;
+  height: 87px;
+  background: url("../img/img-old/spritesheet.png") no-repeat -391px -190px;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+.catalog-item .slider-item__el-discount:after,
+.slider-item .slider-item__el-discount:after {
+  background: url("../img/img-old/spritesheet.png") no-repeat -535px -190px;
+  opacity: 0;
+}
+.catalog-item .slider-item__el-discount span,
+.slider-item .slider-item__el-discount span {
+  color: #fff;
+  z-index: 10;
+  position: relative;
+  font-size: 30px;
+  font-family: neucha, sans-serif;
+}
+.catalog-item .slider-item__el-img,
+.slider-item .slider-item__el-img {
+  max-height: 200px;
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative;
+}
+.catalog-item .slider-item__el-img img,
+.slider-item .slider-item__el-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.catalog-item .slider-item__el span,
+.slider-item .slider-item__el span {
+  display: block;
+}
+.catalog-item .slider-item__el-title,
+.slider-item .slider-item__el-title,
+.catalog-item .slider-item__el-code,
+.slider-item .slider-item__el-code,
+.catalog-item .slider-item__el-profit,
+.slider-item .slider-item__el-profit,
+.catalog-item .slider-item__el-old-price,
+.slider-item .slider-item__el-old-price {
+  font-size: 13px;
+}
+.catalog-item .slider-item__el-old-price,
+.slider-item .slider-item__el-old-price {
+  margin-bottom: 6px;
+}
+.catalog-item .slider-item__el-code,
+.slider-item .slider-item__el-code {
+  margin-bottom: 10px;
+}
+.catalog-item .slider-item__el-profit,
+.slider-item .slider-item__el-profit {
+  color: #0477c2;
+  margin-bottom: 20px;
+}
+.catalog-item .slider-item__el .stars,
+.slider-item .slider-item__el .stars {
+  margin-bottom: 24px;
+}
+.catalog-item .slider-item__el-new-price,
+.slider-item .slider-item__el-new-price {
+  font-size: 24px;
+  margin-bottom: 9px;
+}
+.catalog-item .slider-item__el-links,
+.slider-item .slider-item__el-links {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.catalog-item .slider-item__el-links .btn,
+.slider-item .slider-item__el-links .btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 53px;
+  height: 54px;
+  background: url("../img/spritesheet.png") no-repeat 0 0;
+  opacity: 0.8;
+  margin: 0 5px;
+}
+.catalog-item .slider-item__el-links .btn:hover,
+.slider-item .slider-item__el-links .btn:hover {
+  opacity: 1;
+}
+.catalog-item .slider-item__el-links .btn.btn-show,
+.slider-item .slider-item__el-links .btn.btn-show {
+  background-position: -158px -459px;
+}
+.catalog-item .slider-item__el-links .btn.btn-basket,
+.slider-item .slider-item__el-links .btn.btn-basket {
+  background-position: -253px -459px;
+}
+.catalog-item .owl-nav div,
+.slider-item .owl-nav div {
+  position: absolute;
+  top: 43%;
+  width: 47px;
+  height: 46px;
+  background: url("../img/spritesheet.png") no-repeat 0 0;
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+.catalog-item .owl-nav div:hover,
+.slider-item .owl-nav div:hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.catalog-item .owl-nav div.owl-prev,
+.slider-item .owl-nav div.owl-prev {
+  background-position: -685px -123px;
+  left: -95px;
+}
+.catalog-item .owl-nav div.owl-next,
+.slider-item .owl-nav div.owl-next {
+  background-position: -575px -597px;
+  right: -95px;
+}
 .index--slider {
   position: relative;
   overflow: hidden;
@@ -6401,10 +8380,10 @@ input[type='submit'].styler[disabled] {
   background: #fff;
 }
 .index--slider__el {
-  min-height: 850px;
+  min-height: 840px;
   background-size: cover !important;
   padding-top: 300px;
-  padding-bottom: 100px;
+  padding-bottom: 85px;
   height: 100%;
   display: block;
   width: 100%;
@@ -6574,6 +8553,128 @@ input[type='submit'].styler[disabled] {
 }
 .index--slider__el.index--slider__el-left .banner-content {
   margin-left: 163px;
+}
+.index--catrgory-sell {
+  padding-bottom: 26px;
+}
+.index--sell {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.actions-block .action__link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.actions-block .action__link.action__link1 {
+  border-radius: 10px;
+}
+.actions-block .action__link.action__link3 {
+  margin-top: -45px;
+}
+.actions-block .action__link.action__link3 p {
+  font-family: ttlimesslab;
+  font-size: 36px;
+  margin-bottom: 0;
+  color: #b6906d;
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  text-align: right;
+  line-height: 1;
+}
+.actions-block .action__link.action__link3 p span {
+  font: inherit;
+  color: inherit;
+  display: block;
+  margin-right: -10px;
+}
+.actions-block .action__link.action__link2 {
+  border-radius: 73px;
+}
+.actions-block .action__link.action__link2 .sprite {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.actions-block .action__link.action__link2 p {
+  font-family: ttlimesslab;
+  font-size: 36px;
+  margin-bottom: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 3;
+}
+.actions-block .action__link img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.actions-block .action__link .action__text {
+  width: 100%;
+  position: absolute;
+  right: 50px;
+  top: 53px;
+  color: #fff;
+  max-width: 260px;
+}
+.actions-block .action__link .action__text .title {
+  font-family: ttlimesslab;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.actions-block .action__link .action__text p {
+  font-size: 14px;
+  color: #fff;
+}
+.actions-block .action__link .sprite {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+.actions-block .action__link .sprite-shape1 {
+  width: 255px;
+  height: 114px;
+  background-position: -688px -290px;
+}
+.index--blog {
+  background: #eaf3f9;
+  padding: 35px 0 50px 0;
+}
+.index--blog h2 {
+  margin-bottom: 2px;
+}
+.index--blog .blog--list {
+  margin-left: 30px;
+  width: auto;
+}
+.index--blog .blog--list li {
+  width: 530px;
+  margin-bottom: 0;
+}
+.index--blog .blog--list li img {
+  display: block;
+  margin: 0 auto -8px;
+}
+.index--trend {
+  background: #eaf3f9;
+  padding: 30px 0 20px 0;
+}
+.index--trend .trends-slider {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+.index--trend .trends-slider .trends-slider__el {
+  width: 140px;
+  padding: 10px 0;
+}
+.index--trend .trends-slider .trends-slider__el a {
+  display: block;
+}
+.index--trend .trends-slider .trends-slider__el a:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .cart .cart--img-prise {
   float: right;
@@ -7783,4 +9884,1039 @@ input[type='submit'].styler[disabled] {
   .about .map .map--contacts div span {
     display: block;
   }
+}
+.partner h2 {
+  margin-bottom: 59px;
+}
+.partner-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 214px;
+  height: 151px;
+  margin-top: -14px;
+  margin-right: 77px;
+}
+.partner .text {
+  margin-left: 30px;
+  position: relative;
+}
+.partner .text__el {
+  display: block;
+  width: 820px;
+  padding-bottom: 46px;
+}
+.partner .text__el:first-child {
+  width: 100%;
+}
+.partner .text__el:first-child h3 {
+  margin-bottom: 25px;
+}
+.partner .text__el h3 {
+  margin-bottom: 0;
+}
+.partner .text__el .text-decor {
+  display: inline-block;
+  vertical-align: top;
+  width: 849px;
+  height: 159px;
+  background: url("../img/bg--partner.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  margin-left: -30px;
+  padding-top: 60px;
+  padding-left: 34px;
+  margin-bottom: 13px;
+}
+.partner .text__el .text-decor li {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  vertical-align: top;
+  margin-right: 30px;
+}
+.partner .text__el .text-decor li:first-child p {
+  width: 135px;
+}
+.partner .text__el .text-decor li:last-child {
+  margin-right: 0;
+}
+.partner .text__el .text-decor li span {
+  display: inline-block;
+  vertical-align: top;
+  width: 38px;
+  height: 39px;
+  background: url("../img/bg--number.png") no-repeat 0 0;
+  text-align: center;
+  line-height: 39px;
+  font-weight: bold;
+  padding-left: 3px;
+  margin-right: 20px;
+}
+.partner .text__el .text-decor li p {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  width: 190px;
+}
+.faq h2 {
+  margin-bottom: 43px;
+}
+.faq .accordeon {
+  width: 880px;
+  position: relative;
+  margin-left: 30px;
+}
+.faq .accordeon:after {
+  position: absolute;
+  content: "";
+  width: 184px;
+  height: 207px;
+  background: url("../img/img--faq.png") no-repeat 0 0;
+  right: -229px;
+  top: 2px;
+}
+.faq .accordeon .acc__trigger {
+  display: block;
+  cursor: pointer;
+  padding: 25px 0 15px 60px;
+  margin-bottom: 0;
+}
+.faq .accordeon .acc__trigger i {
+  display: inline-block;
+  vertical-align: top;
+  width: 38px;
+  height: 39px;
+  background: url("../img/bg--number.png") no-repeat 0 0;
+  font-weight: bold;
+  padding-left: 3px;
+  text-align: center;
+  line-height: 38px;
+  font-family: ubuntu-regular, sans-serif;
+  margin-left: -60px;
+  font-style: normal;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-top: -6px;
+}
+.faq .accordeon .acc__trigger i:after {
+  content: "+";
+}
+.faq .accordeon .acc__trigger.active i {
+  background: url("../img/bg--number-gray.png") no-repeat 0 0;
+}
+.faq .accordeon .acc__trigger.active i:after {
+  content: "-";
+}
+.faq .accordeon .acc__container .text {
+  display: block;
+  margin-bottom: 30px;
+  padding: 25px 55px;
+  background: url("../img/bg--partner.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.condition h2 {
+  margin-bottom: 41px;
+}
+.condition .text p,
+.condition .text h3.brown,
+.condition .text span {
+  color: #362510;
+  display: block;
+}
+.condition .text p {
+  margin-bottom: 20px;
+}
+.condition ul {
+  margin-bottom: 25px;
+}
+.condition ul li {
+  padding-left: 12px;
+  position: relative;
+  color: #362510;
+  display: block;
+  line-height: 18px;
+}
+.condition ul li:before {
+  position: absolute;
+  content: "-";
+  left: 0;
+}
+.condition ul.blue li {
+  color: #0477c2;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.condition .delivery {
+  margin-bottom: 60px;
+}
+.condition .delivery .text {
+  margin-left: 30px;
+}
+.condition .delivery .links {
+  padding-left: 12px;
+  position: relative;
+}
+.condition .delivery .links ul.blue {
+  margin-left: 72px;
+  margin-top: 48px;
+}
+.condition .delivery .img--delivery-1 {
+  position: absolute;
+  right: 98px;
+  bottom: -195px;
+}
+.condition .tabs {
+  padding-bottom: 115px;
+}
+.condition .tabs__caption {
+  margin-bottom: 55px;
+}
+.condition .tabs__caption li {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 60px;
+  font-weight: bold;
+  color: #3f4954;
+}
+.condition .tabs__content .flex-between {
+  -ms-flex-align: center;
+      align-items: center;
+}
+.condition .tabs__content .links {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.condition .tabs__content .links img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 40px 3px 72px;
+}
+.condition .tabs__content .links ul.blue {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin-bottom: 0;
+}
+.condition .tabs__content .one-half.text {
+  width: 600px;
+}
+.condition .garant .text {
+  margin-left: 30px;
+}
+.condition .garant img {
+  display: block;
+  margin: 50px auto 0;
+}
+.brands h2 {
+  margin-bottom: 31px;
+}
+.brands .letters {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.brands .letters li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 6px;
+}
+.brands .letters li.active {
+  position: relative;
+}
+.brands .letters li.active:after {
+  position: absolute;
+  content: "";
+  width: 38px;
+  height: 6px;
+  background: url("../img/decor--pagination.png") no-repeat 0 0;
+  bottom: -13px;
+  left: 50%;
+  margin-left: -19px;
+}
+@media (max-width: 768px) {
+  .brands .letters li.active:after {
+    zoom: 0.5;
+  }
+}
+.brands .letters li span,
+.brands .letters li a {
+  display: block;
+  font-size: 24px;
+  font-family: ubuntu-medium, sans-serif;
+}
+.brands .letters li span {
+  color: #0477c2;
+}
+.brands .brends-list {
+  padding-top: 100px;
+  padding-left: 60px;
+}
+.brands .brends-list li {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  height: 100px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 20px 20px;
+}
+.brands .brends-list li img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.brands .brends-list li.active {
+  position: relative;
+}
+.brands .brends-list li.active .content-wrap {
+  margin-left: 0;
+}
+.brands .brends-list li .content-wrap {
+  position: absolute;
+  width: 642px;
+  padding: 63px 120px;
+  background: url("../img/bg--brend-about.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  top: -120px;
+  text-align: left;
+  min-height: 385px;
+  margin-left: -9999999px;
+}
+.brands .brends-list li .content-wrap:before {
+  position: absolute;
+  content: "";
+}
+.brands .brends-list li .content-wrap .content {
+  max-height: 330px;
+}
+.brands .brends-list li .content-wrap .mCSB_scrollTools {
+  background: transparent;
+}
+.brands .brends-list li .content-wrap .mCSB_scrollTools .mCSB_draggerRail {
+  background: transparent !important;
+}
+.brands .brends-list li .content-wrap .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 9px;
+  background: #0477c2;
+  border-radius: 10px;
+}
+.brands .brends-list li:nth-child(6n + 1) .content-wrap,
+.brands .brends-list li:nth-child(6n + 2) .content-wrap,
+.brands .brends-list li:nth-child(6n + 3) .content-wrap {
+  left: 115px;
+}
+.brands .brends-list li:nth-child(6n + 4) .content-wrap,
+.brands .brends-list li:nth-child(6n + 5) .content-wrap,
+.brands .brends-list li:nth-child(6n + 6) .content-wrap {
+  right: 115px;
+  background: url("../img/bg--brend-about-left.png") no-repeat 0 0;
+}
+.slider-discount.item-slider-discount {
+  margin-top: 38px;
+  margin-bottom: 36px;
+}
+.item {
+  padding-bottom: 67px;
+}
+.item .breadcrumbs {
+  margin-left: 30px;
+  margin-bottom: 56px;
+}
+.item .one-half:first-child {
+  margin-left: 30px;
+}
+.item .one-half:last-child {
+  width: 600px;
+}
+.item--img {
+  margin-bottom: 85px;
+}
+.item--img .tabs {
+  padding-top: 26px;
+}
+.item--img .tabs__content {
+  margin-bottom: 40px;
+}
+.item--img .tabs__content img {
+  max-width: 100%;
+}
+.item--img .tabs__caption {
+  text-align: center;
+}
+.item--img .tabs__caption li {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
+  box-sizing: border-box;
+  padding: 2px;
+  border: 3px solid transparent;
+  border-radius: 13px 6px 12px 8px;
+  text-align: center;
+  margin-left: 11px;
+  background: transparent;
+}
+.item--img .tabs__caption li.active {
+  border: 3px solid #c9cbce;
+}
+.item--img .tabs__caption li img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+.item--params {
+  margin-bottom: 85px;
+}
+.item--params-fabricator {
+  display: inline-block;
+  vertical-align: top;
+  color: #0477c2;
+  margin-right: 20px;
+  font-size: 13px;
+}
+.item--params-fabricator:hover {
+  text-decoration: underline;
+}
+.item--params-code {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+}
+.item--params-name {
+  display: block;
+  font-family: ttlimesslab;
+  font-size: 36px;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 42px;
+}
+.item--params-price {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 27px;
+}
+.item--params-price-current {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.item--params-price-current small {
+  font-size: 24px;
+}
+.item--params-price-old {
+  display: block;
+  font-size: 13px;
+}
+.item--params-price-old i {
+  text-decoration: line-through;
+}
+.item--params-color {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  margin-right: 80px;
+  margin-bottom: 35px;
+}
+.item--params-color label {
+  display: inline-block;
+  vertical-align: top;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  cursor: pointer;
+}
+.item--params-color label input {
+  display: none;
+}
+.item--params-color label div {
+  display: block;
+  width: 52px;
+  height: 52px;
+  position: relative;
+}
+.item--params-color label div:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.item--params-color label:nth-child(3n + 1) div:before {
+  background: url("../img/decor--color-left-s.png");
+}
+.item--params-color label:nth-child(3n + 1) input:checked + div:before {
+  background: url("../img/decor--color-left-l.png");
+}
+.item--params-color label:nth-child(3n + 2) div:before {
+  background: url("../img/decor--color-center-s.png");
+}
+.item--params-color label:nth-child(3n + 2) input:checked + div:before {
+  background: url("../img/decor--color-center-l.png");
+}
+.item--params-color label:nth-child(3n + 3) div:before {
+  background: url("../img/decor--color-right-s.png");
+}
+.item--params-color label:nth-child(3n + 3) input:checked + div:before {
+  background: url("../img/decor--color-right-l.png");
+}
+.item--params-color label.radio-color-white div:before {
+  background: url("../img/decor--color-white-s.png");
+}
+.item--params-color label.radio-color-white input:checked + div:before {
+  background: url("../img/decor--color-white-l.png");
+}
+.item--params-data {
+  display: block;
+  background: url("../img/bg--item-data.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  padding: 56px 35px 22px;
+  margin-bottom: 46px;
+}
+.item--params-data div {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 35px;
+}
+.item--params-data div:nth-child(3n+1),
+.item--params-data div:nth-child(3n+2) {
+  width: 150px;
+}
+.item--params-data div:nth-child(3n+3) {
+  width: 210px;
+}
+.item--params-data div.share {
+  margin-bottom: 0;
+}
+.item--params-data div.share * {
+  margin-bottom: 0;
+}
+.item--params-data div span {
+  display: block;
+  color: #362510;
+}
+.item--params-data div span strong {
+  font-weight: bold;
+}
+.item--params-btns {
+  display: block;
+}
+.item--params-btns-value {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 60px;
+  padding-top: 10px;
+  margin-right: 33px;
+}
+.item--params-btns-value a {
+  display: inline-block;
+  vertical-align: top;
+  width: 53px;
+  height: 54px;
+  text-align: center;
+  line-height: 52px;
+  font-weight: bold;
+  color: #3f4954;
+  font-size: 24px;
+}
+.item--params-btns-value a.btn-minus {
+  padding-left: 3px;
+  background: url("../img/bg--number-l.png") no-repeat 0 0;
+}
+.item--params-btns-value a.btn-minus:hover {
+  color: #3f4954;
+  background: url("../img/bg--number-gray-l.png") no-repeat 0 0;
+}
+.item--params-btns-value a.btn-plus {
+  background: url("../img/bg--number-right-l.png") no-repeat 0 0;
+}
+.item--params-btns-value a.btn-plus:hover {
+  color: #3f4954;
+  background: url("../img/bg--number-gray-right-l.png") no-repeat 0 0;
+}
+.item--params-btns-value input {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 54px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+.item--params-btns .btn {
+  display: inline-block;
+  vertical-align: top;
+}
+.item--params-btns .btn-white {
+  display: inline-block;
+  vertical-align: top;
+  background: url("../img/bg--btn-white.png");
+  width: 140px;
+  height: 67px;
+  padding-left: 35px;
+  position: relative;
+  margin-right: 15px;
+  line-height: 65px;
+}
+.item--params-btns .btn-white:before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background: url("../img/decor--arrow.png") no-repeat 0 0;
+  top: 50%;
+  margin-top: -10px;
+  left: 10px;
+  z-index: 10;
+}
+.item--params-btns .btn-white:hover {
+  color: #3f4954;
+}
+.item--params-btns .btn-blue {
+  width: 127px;
+  height: 65px;
+  line-height: 65px;
+  background: url("../img/bg--btn-s.png") no-repeat 0 0;
+}
+.item--about .tabs__caption {
+  margin-bottom: 52px;
+}
+.item--about .tabs__caption li {
+  min-width: 180px;
+  background-size: 100% 100%;
+}
+.item--about .tabs__content {
+  margin-left: 30px;
+}
+.item--about .tabs__content p {
+  margin-bottom: 20px;
+  line-height: 17px;
+}
+.item--about .tabs__content .flex-between {
+  padding-top: 26px;
+}
+.item--about .tabs__content .flex-between .one-half:first-child {
+  margin-left: 0;
+}
+.item--about .tabs__content .flex-between .one-half:last-child {
+  width: 600px;
+}
+.item--about .tabs__content h3 {
+  margin-bottom: 14px;
+}
+.item--about .tabs__content span {
+  display: block;
+  line-height: 17px;
+}
+.item--about .tabs__content .text-list li {
+  display: block;
+  padding-left: 12px;
+  position: relative;
+  font-weight: bold;
+  color: #3f4954;
+  margin-bottom: 17px;
+}
+.item--about .tabs__content .text-list li:before {
+  position: absolute;
+  content: "-";
+  left: 0;
+}
+.item--about .tabs__content .text-list li:last-child {
+  margin-bottom: 0;
+}
+.related {
+  padding-bottom: 48px;
+}
+.catalog {
+  z-index: 5;
+  position: relative;
+}
+.catalog .filter-form-bg {
+  display: block;
+  position: relative;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+}
+.catalog .filter-form-bg:before {
+  position: absolute;
+  content: "";
+  width: 1449px;
+  height: 1000px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -725px;
+  background: url("../img/bg--header-l.png") no-repeat 0 0;
+}
+.catalog .filter-form-bg .filter-form {
+  position: relative;
+  z-index: 10;
+  margin: 0 30px;
+}
+.catalog .filter-form-bg .filter-form h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__select {
+  box-shadow: none !important;
+  background: #fff !important;
+  border: 1px solid #fff !important;
+  border-radius: 30px;
+  width: 200px;
+  height: 38px;
+  padding: 0 35px 0 17px;
+  position: relative;
+  margin-bottom: 31px;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__select .jq-selectbox__select-text {
+  color: #0477c2;
+  font-family: ubuntu-medium, sans-serif;
+  position: relative;
+  z-index: 10;
+  padding-top: 2px;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__select .jq-selectbox__trigger {
+  border: none;
+  z-index: 10;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  border: none;
+  width: 19px;
+  height: 19px;
+  background: url("../img/spritesheet.png") no-repeat -21px -21px;
+  top: 50%;
+  margin-top: -9px;
+  right: 10px;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown {
+  padding-top: 10px;
+  border: 1px solid #fff;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+  background: #fff;
+  top: 27px !important;
+  z-index: 11;
+  padding-bottom: 10px;
+  bottom: auto !important;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown:before,
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 10px;
+  background: #fff;
+  top: -10px;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown:before {
+  left: -1px;
+  border-left: 1px solid #fff;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown:after {
+  right: -1px;
+  border-right: 1px solid #fff;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown ul {
+  display: block;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown ul li {
+  display: block;
+  background: transparent !important;
+  color: #362510 !important;
+  padding-left: 17px;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown ul li:hover {
+  text-decoration: underline;
+}
+.catalog .filter-form-bg .filter-form .jq-selectbox__dropdown ul li.disabled {
+  display: none;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 50px;
+  padding-top: 12px;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap:nth-child(2) {
+  margin-right: 0;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap span.value {
+  position: absolute;
+  font-size: 24px;
+  top: -16px;
+  font-weight: bold;
+  left: 70px;
+  right: 0;
+  text-align: center;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap .ui-slider-horizontal {
+  display: inline-block;
+  vertical-align: top;
+  width: 165px;
+  height: 5px;
+  border-radius: 5px;
+  background: #a8b6c6;
+  margin-left: 17px;
+  margin-top: 10px;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap .ui-slider-horizontal:before,
+.catalog .filter-form-bg .filter-form .slider-wrap .ui-slider-horizontal:after {
+  position: absolute;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap .ui-slider-horizontal .ui-slider-handle {
+  width: 19px;
+  height: 19px;
+  background: url("../img/spritesheet.png") no-repeat -263px -319px;
+  cursor: pointer;
+  outline: none;
+  top: 4px;
+}
+.catalog .filter-form-bg .filter-form .slider-wrap .ui-slider-horizontal .ui-slider-handle:hover {
+  background: url("../img/spritesheet.png") no-repeat -323px -319px;
+}
+.catalog .filter-form-bg .filter-form .filter-color {
+  display: inline-block;
+  vertical-align: top;
+  width: 230px;
+  margin-right: 80px;
+  margin-bottom: 35px;
+  white-space: nowrap;
+  margin-top: -17px;
+}
+.catalog .filter-form-bg .filter-form .filter-color span,
+.catalog .filter-form-bg .filter-form .filter-color .grid {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+.catalog .filter-form-bg .filter-form .filter-color span {
+  margin-right: 30px;
+}
+.catalog .filter-form-bg .filter-form .filter-color label {
+  display: inline-block;
+  vertical-align: top;
+  width: 62px;
+  height: 62px;
+  position: relative;
+  cursor: pointer;
+}
+.catalog .filter-form-bg .filter-form .filter-color label input {
+  display: none;
+}
+.catalog .filter-form-bg .filter-form .filter-color label div {
+  display: block;
+  width: 62px;
+  height: 62px;
+  position: relative;
+}
+.catalog .filter-form-bg .filter-form .filter-color label div:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 100% 100% !important;
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 1) div:before {
+  background: url("../img/decor--color-left-s-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 1) input:checked + div:before {
+  background: url("../img/decor--color-left-l-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 2) div:before {
+  background: url("../img/decor--color-center-s-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 2) input:checked + div:before {
+  background: url("../img/decor--color-center-l-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 3) div:before {
+  background: url("../img/decor--color-right-s-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-color label:nth-child(3n + 3) input:checked + div:before {
+  background: url("../img/decor--color-right-l-blue.png");
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox {
+  display: block;
+  padding-top: 51px;
+  width: 530px;
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  min-width: 25%;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox label input {
+  display: none;
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox label .psevdocheckbox {
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: #fff;
+  margin-right: 15px;
+  box-sizing: border-box;
+  border: 4px solid #fff;
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox label input:checked + .psevdocheckbox {
+  background: #0477c2;
+}
+.catalog .filter-form-bg .filter-form .filter-top--center--checkbox label span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 15px;
+}
+.catalog .filter-form-bg .filter-top {
+  padding-bottom: 26px;
+}
+.catalog .filter-form-bg .filter-bottom {
+  display: block;
+  margin-left: 150px;
+}
+.catalog .filter-form-bg .filter-brends {
+  display: inline-block;
+  vertical-align: top;
+  width: 720px;
+}
+.catalog .filter-form-bg .filter-brends label {
+  display: inline-block;
+  vertical-align: top;
+  width: 19.5%;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.catalog .filter-form-bg .filter-brends label input {
+  display: none;
+}
+.catalog .filter-form-bg .filter-brends label span {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 13px;
+}
+.catalog .filter-form-bg .filter-brends label input:checked + span {
+  color: #0477c2;
+}
+.catalog .filter-form-bg .filter-brends label input:checked + span:after {
+  position: absolute;
+  content: "";
+  height: 6px;
+  background: url("../img/decor--pagination.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+.catalog .filter-form-bg .decor-left-remove {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+.catalog .filter-form-bg .decor-left-remove span {
+  display: inline-block;
+  vertical-align: top;
+}
+.catalog aside {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  margin-left: 30px;
+  position: relative;
+  margin-bottom: 278px;
+}
+.catalog aside:before {
+  left: -77px;
+  right: -57px;
+  top: -69px;
+  bottom: -50px;
+  position: absolute;
+  content: "";
+  background: url("../img/bg--aside.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.catalog aside:after {
+  position: absolute;
+  content: "";
+  width: 176px;
+  height: 187px;
+  background: url("../img/img--catalog.png") no-repeat 0 0;
+  left: 10px;
+  bottom: -278px;
+}
+.catalog aside .aside-nav {
+  position: relative;
+  padding-top: 9px;
+}
+.catalog aside .aside-nav li {
+  display: block;
+  margin-bottom: 15px;
+}
+.catalog aside .aside-nav li a,
+.catalog aside .aside-nav li span {
+  display: block;
+  padding: 9px 15px;
+  font-size: 13px;
+  border-radius: 20px;
+}
+.catalog aside .aside-nav li span,
+.catalog aside .aside-nav li a:hover {
+  background: #fff;
+  color: #0477c2;
+}
+.catalog .catalog--container {
+  display: inline-block;
+  vertical-align: top;
+  width: 900px;
+  position: relative;
+  z-index: 15;
+}
+.catalog .catalog--container p.notification {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.catalog .catalog--container h2 {
+  margin-bottom: 30px;
+}
+.catalog .catalog--container .catalog-item {
+  margin-left: -15px;
+}
+.catalog .catalog--container .slider-item__el {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 13px;
+  height: 455px;
+  margin-bottom: 15px;
 }

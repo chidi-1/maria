@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link rel="icon" href="../../../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script>if (/*@cc_on!@*/false) {            document.documentElement.className += ' ie10';        }</script>
+    <script src="../../../js/app-common.js"></script>
+    <script src="../../../js/app.js"></script>
+    <script src="../../../js/jquery.pixlayout.0.9.6.js"></script>
+  </head>
+  <!-- http://jade-lang.com/reference/mixins/-->
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div class="width-wrap">
+          <div class="header--top">
+            <div class="flex-between">
+              <nav class="header--nav">
+                <ul>
+                  <li><a href="">Главная</a></li>
+                  <li><a href="">Каталог товаров</a></li>
+                  <li><a href="">Бренды</a></li>
+                  <li><a href="">Доставка и оплата</a></li>
+                  <li><a href="">FAQ</a></li>
+                  <li><a href="">Партнерам</a></li>
+                  <li><a href="">Блог компании</a></li>
+                  <li><a href="">О компании</a></li>
+                </ul>
+              </nav><a href="" class="header--lk">Вход в личный кабинет</a><a href="" class="js--mobile-menu"></a>
+            </div>
+          </div>
+          <div class="header--top-mobile">
+            <div class="flex-between">
+              <div class="header--logo"><img src="../../../img/logo--header.jpg" alt /></div><a href="tel:84991319392" class="header--phone">8 (499) 131-93-92</a><a href="" class="js--mobile-menu"></a>
+            </div>
+          </div>
+          <div class="header--middle">
+            <div class="flex-between"><a href="" class="header--lk"></a>
+              <div class="header--logo"><img src="../../../img/logo--header.jpg" alt /></div><a href="tel:84991319392" class="header--phone">8 (499) 131-93-92</a>
+              <form method="post" action="" class="header--searh main-form dropdown-wrap">
+                <label class="change-category js--open-dropdown">
+                  <input type="text" name="category" value="Выберите..." class="inp">
+                </label>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="" class="js--change-category">Опция 1</a></li>
+                    <li><a href="" class="js--change-category">Опция 2</a></li>
+                    <li><a href="" class="js--change-category">Опция 3</a></li>
+                  </ul>
+                </div>
+                <label>
+                  <input type="text" name="search" placeholder="Поиск товара" class="inp required">
+                </label>
+                <input type="submit" value="" class="inp-submit js--form-submit">
+              </form>
+              <div class="header--basket dropdown-wrap">
+                <div class="header--basket-empty hidden-block"><span>Ваша корзина пуста</span></div>
+                <div class="header--basket-full flex-between flex-vertical">
+                  <div class="header--basket-icon"></div>
+                  <div class="header--basket-current"><span><i>3</i> товара</span><i class="js--open-dropdown"></i></div><span class="header--basket-summ">3200 р.</span>
+                  <div class="dropdown">
+                    <ul class="header--basket-list">
+                      <li><span>Товар 1</span></li>
+                      <li><span>Товар 2</span></li>
+                      <li><span>Товар 3</span></li>
+                    </ul><a href="" class="btn">Перейти в корзину</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header--bottom">
+            <ul class="flex-between">
+              <li class="dropdown-wrap"><a href="">Одежда</a>
+                <ul class="inner-list dropdown">
+                  <li><a href="">Внутренний пункт 1</a></li>
+                  <li><a href="">Внутренний пункт 2</a></li>
+                  <li><a href="">Lkb выало выадоыв адолыва долыва олдыва</a></li>
+                </ul>
+              </li>
+              <li><a href="">Обувь</a></li>
+              <li><a href="">Аксессуары</a></li>
+              <li><a href="">Школа</a></li>
+              <li><a href="">Питание</a></li>
+              <li><a href="">Самым маленьким</a></li>
+              <li><a href="">Гигиена дома</a></li>
+              <li><a href="">Игрушки</a></li>
+              <li><a href="">Игры и творчество</a></li>
+              <li><a href="">Спорт и отдых</a></li>
+              <li class="dropdown-wrap"><a href="">Подарки</a>
+                <ul class="inner-list dropdown">
+                  <li><a href="">Внутренний пункт 1</a></li>
+                  <li><a href="">Внутренний пункт 2</a></li>
+                  <li><a href="">Lkb выало выадоыв адолыва долыва олдыва</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-wrap"><a href="" class="active">Биопродукты</a>
+                <ul class="inner-list dropdown">
+                  <li><a href="">Внутренний пункт 1</a></li>
+                  <li><a href="">Внутренний пункт 2</a></li>
+                  <li><a href="">Lkb выало выадоыв адолыва долыва олдыва</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="header--padding">
+          <div class="width-wrap">
+            <h2>Категории в которых идет распродажа</h2>
+          </div>
+        </section>
+        <section class="slider-discount item-slider-discount"><a href="" class="slider-discount__el slider-discount__el-beige"><img src="../../../img/img--slider-docsount-1.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Платья</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a><a href="" class="slider-discount__el slider-discount__el-blue"><img src="../../../img/img--slider-docsount-2.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Головные уборы</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a><a href="" class="slider-discount__el slider-discount__el-brown"><img src="../../../img/img--slider-docsount-3.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Обувь</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a><a href="" class="slider-discount__el slider-discount__el-beige"><img src="../../../img/img--slider-docsount-1.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Платья</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a><a href="" class="slider-discount__el slider-discount__el-blue"><img src="../../../img/img--slider-docsount-2.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Головные уборы</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a><a href="" class="slider-discount__el slider-discount__el-brown"><img src="../../../img/img--slider-docsount-3.png" alt />
+            <div class="content"><span class="text-right">Скидки до 30%</span><span class="name">Обувь</span>
+              <div class="decor-left"><span>Перейти в раздел</span></div>
+            </div></a></section>
+        <section class="item">
+          <div class="width-wrap">
+            <ul class="breadcrumbs">
+              <li><a href=""><strong>Главная</strong></a></li>
+              <li><a href="">Одежда</a></li>
+              <li><a href="">Толстовки, фуфайки, майки, футболки, свитеры и&nbsp;водолазки</a></li>
+              <li><span><strong>Толстовки</strong></span></li>
+            </ul>
+            <div class="flex-between">
+              <div class="one-half item--img">
+                <div class="tabs">
+                  <div class="tabs__content active"><img src="../../../img/img--item-l.jpg" alt /></div>
+                  <div class="tabs__content"><img src="../../../img/img--item-l.jpg" alt /></div>
+                  <div class="tabs__content"><img src="../../../img/img--item-l.jpg" alt /></div>
+                  <div class="tabs__content"><img src="../../../img/img--item-l.jpg" alt /></div>
+                  <div class="tabs__content"><img src="../../../img/img--item-l.jpg" alt /></div>
+                  <ul class="tabs__caption">
+                    <li class="active"><img src="../../../img/img--item.jpg" alt /></li>
+                    <li><img src="../../../img/img--item.jpg" alt /></li>
+                    <li><img src="../../../img/img--item.jpg" alt /></li>
+                    <li><img src="../../../img/img--item.jpg" alt /></li>
+                    <li><img src="../../../img/img--item.jpg" alt /></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="one-half item--params">
+                <form action="" method="post" class="main-form"><a href="" class="item--params-fabricator"> DEUX par DEUX</a><span class="item--params-code">Артикул: DD-D-705-W16-003</span><span class="item--params-name">Deux par Deux, Комбинезон зимний 226гр.<br>(синий джинс/принт елочка)</span>
+                  <ul class="stars">
+                    <li class="active"></li>
+                    <li class="active"></li>
+                    <li class="active"></li>
+                    <li class="active"></li>
+                    <li></li>
+                  </ul>
+                  <div class="flex-between">
+                    <div class="item--params-price"><span class="item--params-price-current">999 999,99<small>руб.</small></span><span class="item--params-price-old">Старая цена<i>4 200 руб.</i></span></div>
+                    <div class="item--params-color grid">
+                      <label class="radio-color grid-item">
+                        <input type="radio" checked name="color" value="color1">
+                        <div style="background: #ff1313"></div>
+                      </label>
+                      <label class="radio-color grid-item">
+                        <input type="radio" name="color" value="color1">
+                        <div style="background: #ffbf11"></div>
+                      </label>
+                      <label class="radio-color grid-item">
+                        <input type="radio" name="color" value="color1">
+                        <div style="background: #60a4ee"></div>
+                      </label>
+                      <label class="radio-color grid-item">
+                        <input type="radio" name="color" value="color1">
+                        <div style="background: #55ce3d"></div>
+                      </label>
+                      <label class="radio-color grid-item">
+                        <input type="radio" name="color" value="color1">
+                        <div style="background: #cd4eed"></div>
+                      </label>
+                      <label class="radio-color radio-color-white grid-item">
+                        <input type="radio" name="color" value="color1">
+                        <div style="background: #ffffff"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item--params-data">
+                    <div><span><strong>Сезон:</strong> 2017</span></div>
+                    <div><span><strong>Гарантия:</strong> 365 дней</span></div>
+                    <div><span><strong>Доставка:</strong> завтра, бесплатно</span></div>
+                    <div><span><strong>В наличии:</strong> есть</span></div>
+                    <div><span><strong>Размер:</strong> XXXL</span></div>
+                    <div>
+                      <script src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                      <script src="http://yastatic.net/share2/share.js"></script>
+                      <div data-services="vkontakte,facebook,odnoklassniki,twitter" class="share ya-share2"></div>
+                    </div>
+                  </div>
+                  <div class="item--params-btns">
+                    <div class="item--params-btns-value"><a href="" class="btn btn-minus js--minus">-</a>
+                      <input type="text" name="amount" value="1" maxlength="3" class="inp-number"><a href="" class="btn btn-plus js--plus">+</a>
+                    </div><a href="" class="btn btn-white js--one-click">В 1 клик</a><a href="" class="btn btn-blue js--add-item">В корзину</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tabs item--about">
+              <ul class="tabs__caption">
+                <li class="active">Описание</li>
+                <li>Все характеристики</li>
+                <li>Отзывы</li>
+                <li>Видео</li>
+                <li>Вопрос-ответ</li>
+              </ul>
+              <div class="tabs__content active">
+                <p>Верхняя одежда Deux par Deux имеет внешнее покрытие DuPont Teflon, внутреннее&nbsp;&mdash; 100% полиуретан. Благодаря этому ткань обеспечивает защиту от&nbsp;грязи, а&nbsp;также маслосодержащих загрязнений и&nbsp;обеспечивает водостойкость 5000&nbsp;мм (показатель водостойкости стандартного дождевика&nbsp;&mdash; 1300&nbsp;мм).</p>
+                <div class="flex-between">
+                  <div class="one-half">
+                    <h3>Особенности:</h3><span>Эластичные регулируемые манжеты</span><span>Съемные пинетки и&nbsp;рукавички снабжены веревочкой во&nbsp;избежания потери и&nbsp;кнопками</span><span>Молния с&nbsp;защитой подбородка</span><span>Внутри капюшон, воротник, пинетки, митенки на&nbsp;подкладке из&nbsp;флиса</span><span>Регулируемая кулиска на&nbsp;талии</span><span>Наличие петельки, чтобы повесить одежду</span><span>Наличие этикетки с&nbsp;ФИО ребенка внутри</span><span>Наличие светоотражателей</span>
+                  </div>
+                  <div class="one-half">
+                    <h3>Состав комплекта:</h3>
+                    <ul class="text-list">
+                      <li>комбинезон</li>
+                      <li>шарф (флис)</li>
+                      <li>манишка (флис)</li>
+                      <li>варежки</li>
+                      <li>пинетки</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="related">
+          <div class="width-wrap">
+            <h2>C&nbsp;этим товаром часто покупают:</h2>
+            <div class="slider-item">
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="interested">
+          <div class="width-wrap">
+            <h2>Вас интересовали</h2>
+            <div class="slider-item">
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+              <div class="slider-item__el">
+                <div class="slider-item__el-discount"><span>-30%</span></div><a href="" class="slider-item__el-img"><img src="../../../img/img-old/pic2.jpg" alt /></a><a href="" class="slider-item__el-title">Платье Aletta</a><a href="" class="slider-item__el-code">Артикул</a>
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul><span class="slider-item__el-old-price">5 200 руб.</span><span class="slider-item__el-new-price">6 630 руб.</span><span class="slider-item__el-profit">выгода 1 890 руб. или 30%</span>
+                <div class="slider-item__el-links"><a href="../../../img/img-old/pic2.jpg" class="fancy btn btn-show"></a><a href="" class="btn btn-basket js--add-item"></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script type="text/javascript">$(function(){$.pixlayout({src: "../../../img/temp/item.jpg",opacity: 0.5,top: 0,left: 0,center: false,clip: true,show: false});});</script>
+      <div class="psevdofooter"></div>
+      <footer class="footer">
+        <div class="width-wrap flex-between">
+          <div class="col-sm-4 footer__col1">
+            <p class="address">ООО "Торговая Компания Мария"<br>Москва, Ленинский проспект, д. 78
+            </p>
+            <div class="tels-block">
+              <div class="footer__tel"><a href="tel:84991315112">8 (499) 131-51-12</a><span>Детское питание</span></div>
+              <div class="footer__tel"><a href="tel:84991319392">8 (499) 131-93-92</a><span>Одежда и обувь</span></div>
+              <div class="footer__tel"><a href="tel:84991319076">8 (499) 131-90-76</a><span>Игрушки</span></div>
+            </div>
+          </div>
+          <div class="col-sm-4 footer__col2">
+            <div class="tels-block">
+              <div class="sprite sprite-call"></div>
+              <div class="footer__tel"><a href="tel:88001319392">8 (800) 131-93-92</a><span>24-7 Поддержка</span></div>
+            </div>
+            <div class="developed-by"><span>Создание сайта</span><a href=""><img src="../../../img/developed-by.png" alt=""></a></div>
+          </div>
+          <div class="col-sm-4 footer__col3">
+            <ul class="socials-list">
+              <li class="socials-list__el"><a href="" class="socials-list__el-fb"></a></li>
+              <li class="socials-list__el"><a href="" class="socials-list__el-tw"></a></li>
+              <li class="socials-list__el"><a href="" class="socials-list__el-vk"></a></li>
+              <li class="socials-list__el"><a href="" class="socials-list__el-in"></a></li>
+            </ul><img src="../../../img/want.png" class="footer__img">
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
