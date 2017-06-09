@@ -31,12 +31,12 @@
                   <li><a href="">Блог компании</a></li>
                   <li><a href="">О компании</a></li>
                 </ul>
-              </nav><a href="" class="header--lk">Вход в личный кабинет</a><a href="" class="js--mobile-menu"></a>
+              </nav><a href="" class="header--lk">Вход в личный кабинет</a><a href="" class="header--mobile-menu js--mobile-menu"></a>
             </div>
           </div>
           <div class="header--top-mobile">
             <div class="flex-between">
-              <div class="header--logo"><img src="../../../img/logo--header.jpg" alt /></div><a href="tel:84991319392" class="header--phone">8 (499) 131-93-92</a><a href="" class="js--mobile-menu"></a>
+              <div class="header--logo"><img src="../../../img/logo--header.jpg" alt /></div><a href="tel:84991319392" class="header--phone">8 (499) 131-93-92</a><a href="" class="header--mobile-menu js--mobile-menu"></a>
             </div>
           </div>
           <div class="header--middle">
@@ -58,17 +58,37 @@
                 </label>
                 <input type="submit" value="" class="inp-submit js--form-submit">
               </form>
-              <div class="header--basket dropdown-wrap">
+              <div class="header--basket dropdown-wrap"><span class="header--current-mobile">75</span>
                 <div class="header--basket-empty hidden-block"><span>Ваша корзина пуста</span></div>
                 <div class="header--basket-full flex-between flex-vertical">
                   <div class="header--basket-icon"></div>
                   <div class="header--basket-current"><span><i>3</i> товара</span><i class="js--open-dropdown"></i></div><span class="header--basket-summ">3200 р.</span>
                   <div class="dropdown">
-                    <ul class="header--basket-list">
-                      <li><span>Товар 1</span></li>
-                      <li><span>Товар 2</span></li>
-                      <li><span>Товар 3</span></li>
-                    </ul><a href="" class="btn">Перейти в корзину</a>
+                    <div class="bg-wrap">
+                      <div class="empty hidden-block">
+                        <p>Ваша корзина пуста. Перейдите в интересующий Вас раздел для совершения покупки</p>
+                      </div>
+                      <div class="full">
+                        <ul data-url="../../../js/ajax/remove-basket.php" data-method="post" class="header--basket-list">
+                          <li data-id="id_1"><a href="" class="header--basket-list--img"><img src="../../../img/img--item.jpg" alt /></a>
+                            <div class="header--basket-list--content"><span>Deux par Deux, Комбинезон...</span><span><strong>1x1450 руб.</strong></span></div><a href="" class="header--basket-list--remove js--delete-header-item"></a>
+                          </li>
+                          <li data-id="id_2"><a href="" class="header--basket-list--img"><img src="../../../img/img--item.jpg" alt /></a>
+                            <div class="header--basket-list--content"><span>Deux par Deux, Комбинезон...</span><span><strong>1x1450 руб.</strong></span></div><a href="" class="header--basket-list--remove js--delete-header-item"></a>
+                          </li>
+                          <li data-id="id3"><a href="" class="header--basket-list--img"><img src="../../../img/img--item.jpg" alt /></a>
+                            <div class="header--basket-list--content"><span>Deux par Deux, Комбинезон...</span><span><strong>1x1450 руб.</strong></span></div><a href="" class="header--basket-list--remove js--delete-header-item"></a>
+                          </li>
+                          <li data-id="id4"><a href="" class="header--basket-list--img"><img src="../../../img/img--item.jpg" alt /></a>
+                            <div class="header--basket-list--content"><span>Deux par Deux, Комбинезон...</span><span><strong>1x1450 руб.</strong></span></div><a href="" class="header--basket-list--remove js--delete-header-item"></a>
+                          </li>
+                          <li data-id="id5"><a href="" class="header--basket-list--img"><img src="../../../img/img--item.jpg" alt /></a>
+                            <div class="header--basket-list--content"><span>Deux par Deux, Комбинезон...</span><span><strong>1x1450 руб.</strong></span></div><a href="" class="header--basket-list--remove js--delete-header-item"></a>
+                          </li>
+                        </ul>
+                        <div class="flex-between"><span>Итоговая цена</span><span class="value">37500 руб.</span></div><a href="" class="btn">В корзину</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -76,7 +96,7 @@
           </div>
           <div class="header--bottom">
             <ul class="flex-between">
-              <li class="dropdown-wrap"><a href="">Одежда</a>
+              <li class="dropdown-wrap"><a href="">Одежда</a><a href="" class="mobile-icon js--open-menu"></a>
                 <ul class="inner-list dropdown">
                   <li><a href="">Внутренний пункт 1</a></li>
                   <li><a href="">Внутренний пункт 2</a></li>
@@ -92,14 +112,14 @@
               <li><a href="">Игрушки</a></li>
               <li><a href="">Игры и творчество</a></li>
               <li><a href="">Спорт и отдых</a></li>
-              <li class="dropdown-wrap"><a href="">Подарки</a>
+              <li class="dropdown-wrap"><a href="">Подарки</a><a href="" class="mobile-icon js--open-menu"></a>
                 <ul class="inner-list dropdown">
                   <li><a href="">Внутренний пункт 1</a></li>
                   <li><a href="">Внутренний пункт 2</a></li>
                   <li><a href="">Lkb выало выадоыв адолыва долыва олдыва</a></li>
                 </ul>
               </li>
-              <li class="dropdown-wrap"><a href="" class="active">Биопродукты</a>
+              <li class="dropdown-wrap"><a href="" class="active bio">Биопродукты</a><a href="" class="mobile-icon js--open-menu"></a>
                 <ul class="inner-list dropdown">
                   <li><a href="">Внутренний пункт 1</a></li>
                   <li><a href="">Внутренний пункт 2</a></li>
@@ -115,112 +135,120 @@
           <div class="width-wrap">
             <h2>Корзина <i>(Шаг Первый)</i>
             </h2>
-            <form action="" method="post" data-discount-url="../../../js/ajax/discount-basket.php" data-change-url="../../../js/ajax/change-basket.php" data-remove-url="../../../js/ajax/remove-basket.php" class="main-form js--form-submit-default">
-              <div class="cart-list-wrap">
-                <ul class="cart-list">
-                  <li class="title flex-between">
-                    <div class="cart-list--img"></div>
-                    <div class="cart-list--art"><span>Артикул</span></div>
-                    <div class="cart-list--title"><span>Название</span></div>
-                    <div class="cart-list--amount"><span>Кол-во</span></div>
-                    <div class="cart-list--cost"></div>
-                    <div class="cart-list--total"><span>Стоимость</span></div>
-                    <div class="cart-list--remove"></div>
-                  </li>
-                  <li data-id="id_1" class="flex-between">
-                    <div class="cart-list--img">
-                      <div><img src="../../../img/img--item.jpg" alt /></div>
-                    </div>
-                    <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
-                    <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
-                      <input type="hidden" name="id_1" value="Товар1">
-                    </div>
-                    <div class="cart-list--amount">
-                      <input type="text" name="id_1" maxlength="7" class="inp inp-number">
-                    </div>
-                    <div class="cart-list--cost"><span>2325</span></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
-                  </li>
-                  <li data-id="id_1" class="flex-between">
-                    <div class="cart-list--img">
-                      <div><img src="../../../img/img--item.jpg" alt /></div>
-                    </div>
-                    <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
-                    <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
-                      <input type="hidden" name="id_1" value="Товар1">
-                    </div>
-                    <div class="cart-list--amount">
-                      <input type="text" name="id_1" value="3" maxlength="7" class="inp inp-number">
-                    </div>
-                    <div class="cart-list--cost"><span>2325</span></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
-                  </li>
-                  <li data-id="id_1" class="flex-between">
-                    <div class="cart-list--img">
-                      <div><img src="../../../img/img--item.jpg" alt /></div>
-                    </div>
-                    <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
-                    <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
-                      <input type="hidden" name="id_1" value="Товар1">
-                    </div>
-                    <div class="cart-list--amount">
-                      <input type="text" name="id_1" maxlength="7" class="inp inp-number">
-                    </div>
-                    <div class="cart-list--cost"><span>2325</span></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
-                  </li>
-                  <li data-id="id_1" class="flex-between">
-                    <div class="cart-list--img">
-                      <div><img src="../../../img/img--item.jpg" alt /></div>
-                    </div>
-                    <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
-                    <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
-                      <input type="hidden" name="id_1" value="Товар1">
-                    </div>
-                    <div class="cart-list--amount">
-                      <input type="text" name="id_1" maxlength="7" class="inp inp-number">
-                    </div>
-                    <div class="cart-list--cost"><span>2325</span></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
-                  </li>
-                  <li data-id="id_1" class="flex-between">
-                    <div class="cart-list--img">
-                      <div><img src="../../../img/img--item.jpg" alt /></div>
-                    </div>
-                    <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
-                    <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
-                      <input type="hidden" name="id_1" value="Товар1">
-                    </div>
-                    <div class="cart-list--amount">
-                      <input type="text" name="id_1" class="inp inp-number">
-                    </div>
-                    <div class="cart-list--cost"><span>2325</span></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
-                  </li>
-                  <li class="total flex-between">
-                    <div class="cart-list--discount">
-                      <input type="text" name="discount" placeholder="Введите промокод" class="inp"><a href="" class="decor-link-ok js--card-discount"><span>Активировать</span></a>
-                    </div>
-                    <div class="cart-list--amount"><span>1999</span></div>
-                    <div class="cart-list--cost"></div>
-                    <div class="cart-list--total"><span>999.999 р.</span></div>
-                    <div class="cart-list--remove"></div>
-                  </li>
-                </ul>
-              </div>
-              <div class="cart--btn">
-                <input type="submit" value="Продолжить" class="btn btn-blue js--form-submit"><span class="notification">(К выбору адреса и способа доставки)</span>
-              </div>
-            </form>
+            <div class="cart-empty hidden-block">
+              <p>Ваша корзина пуста. Перейдите в интересующий Вас раздел для совершения покупки</p>
+            </div>
+            <div class="cart-full">
+              <form action="" method="post" data-discount-url="../../../js/ajax/discount-basket.php" data-change-url="../../../js/ajax/change-basket.php" data-remove-url="../../../js/ajax/remove-basket.php" class="main-form js--form-submit-default">
+                <div class="cart-list-wrap">
+                  <ul class="cart-list cart-list--left">
+                    <li class="title flex-between">
+                      <div class="cart-list--img"></div>
+                      <div class="cart-list--art"><span>Артикул</span></div>
+                      <div class="cart-list--title"><span>Название</span></div>
+                      <div class="cart-list--amount"><span>Кол-во</span></div>
+                      <div class="cart-list--cost"></div>
+                      <div class="cart-list--total"><span>Стоимость</span></div>
+                      <div class="cart-list--remove"></div>
+                    </li>
+                  </ul>
+                  <ul class="cart-list cart-list--slider">
+                    <li data-id="id_1" id="id_1" class="flex-between">
+                      <div class="cart-list--img">
+                        <div><img src="../../../img/img--item.jpg" alt /></div>
+                      </div>
+                      <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
+                      <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
+                        <input type="hidden" name="id_1" value="Товар1">
+                      </div>
+                      <div class="cart-list--amount">
+                        <input type="text" name="id_1" maxlength="7" class="inp inp-number">
+                      </div>
+                      <div class="cart-list--cost"><span>2325</span></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
+                    </li>
+                    <li data-id="id_2" id="id_2" class="flex-between">
+                      <div class="cart-list--img">
+                        <div><img src="../../../img/img--item.jpg" alt /></div>
+                      </div>
+                      <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
+                      <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
+                        <input type="hidden" name="id_1" value="Товар1">
+                      </div>
+                      <div class="cart-list--amount">
+                        <input type="text" name="id_1" value="3" maxlength="7" class="inp inp-number">
+                      </div>
+                      <div class="cart-list--cost"><span>2325</span></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
+                    </li>
+                    <li data-id="id_1" id="id_1" class="flex-between">
+                      <div class="cart-list--img">
+                        <div><img src="../../../img/img--item.jpg" alt /></div>
+                      </div>
+                      <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
+                      <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
+                        <input type="hidden" name="id_1" value="Товар1">
+                      </div>
+                      <div class="cart-list--amount">
+                        <input type="text" name="id_1" maxlength="7" class="inp inp-number">
+                      </div>
+                      <div class="cart-list--cost"><span>2325</span></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
+                    </li>
+                    <li data-id="id_1" class="flex-between">
+                      <div class="cart-list--img">
+                        <div><img src="../../../img/img--item.jpg" alt /></div>
+                      </div>
+                      <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
+                      <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
+                        <input type="hidden" name="id_1" value="Товар1">
+                      </div>
+                      <div class="cart-list--amount">
+                        <input type="text" name="id_1" maxlength="7" class="inp inp-number">
+                      </div>
+                      <div class="cart-list--cost"><span>2325</span></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
+                    </li>
+                    <li data-id="id_1" class="flex-between">
+                      <div class="cart-list--img">
+                        <div><img src="../../../img/img--item.jpg" alt /></div>
+                      </div>
+                      <div class="cart-list--art"><span>DD-D-705-W16-003</span></div>
+                      <div class="cart-list--title"><span>Deux par Deux, Комбинезон зимний 226гр.</span><span>(синий джинс/принт елочка)</span>
+                        <input type="hidden" name="id_1" value="Товар1">
+                      </div>
+                      <div class="cart-list--amount">
+                        <input type="text" name="id_1" class="inp inp-number">
+                      </div>
+                      <div class="cart-list--cost"><span>2325</span></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"><a href="" class="js--delete-item">Удалить<br>товар</a></div>
+                    </li>
+                  </ul>
+                  <ul class="cart-list cart-list--bottom">
+                    <li class="total flex-between">
+                      <div class="cart-list--discount">
+                        <input type="text" name="discount" placeholder="Введите промокод" class="inp"><a href="" class="decor-link-ok js--card-discount"><span>Активировать</span></a>
+                      </div>
+                      <div class="cart-list--amount"><span>1999</span></div>
+                      <div class="cart-list--cost"></div>
+                      <div class="cart-list--total"><span>999.999 р.</span></div>
+                      <div class="cart-list--remove"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cart--btn">
+                  <input type="submit" value="Продолжить" class="btn btn-blue js--form-submit"><span class="notification">(К выбору адреса и способа доставки)</span>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
       </main>
-      <script type="text/javascript">$(function(){$.pixlayout({src: "../../../img/temp/cart.jpg",opacity: 0.5,top: 0,left: 0,center: false,clip: true,show: false});});</script>
       <div class="psevdofooter"></div>
       <footer class="footer">
         <div class="width-wrap flex-between">
@@ -234,8 +262,8 @@
             </div>
           </div>
           <div class="col-sm-4 footer__col2">
+            <div class="sprite sprite-call"></div>
             <div class="tels-block">
-              <div class="sprite sprite-call"></div>
               <div class="footer__tel"><a href="tel:88001319392">8 (800) 131-93-92</a><span>24-7 Поддержка</span></div>
             </div>
             <div class="developed-by"><span>Создание сайта</span><a href=""><img src="../../../img/developed-by.png" alt=""></a></div>

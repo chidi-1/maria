@@ -3,186 +3,21 @@
  * @version v0.1.0
  * @author bev-olga@yandex.ru
  */
-var timeout_link; // задержка при вводе в поле
-
-// удалить позицию из корзины
-$(document).on('click', '.js--delete-item', function () {
-    var btn = $(this);
-    var url = btn.closest('form').data('remove-url');
-    var method = btn.closest('form').data('method');
-    var id = btn.closest('li').data('id');
-    var block = btn.closest('li');
-
-    $.ajax({
-        url: url,
-        method: method,
-        data: {id: id},
-        success: function (data) {
-            var parse_data = jQuery.parseJSON(data);
-
-            var number = parse_data.total_length.toString();
-            var number_text = " товаров";
-            number = Number(number.substr(number.length - 1, 1));
-
-            if (number == 1) {
-                number_text = " товар";
-            }
-            if (number == 2 || number == 3 || number == 4) {
-                number_text = " товара";
-            }
-
-            $('.cart-list .total .cart-list--amount span').text(parse_data.total_amout);
-            $('.cart-list .total .cart-list--total span').html(parse_data.total + ' руб.');
-            $('.header--basket-summ').html(parse_data.total + ' р.');
-            $('.header--basket-current span').html('<i>' + parse_data.total_length + '</i>' + number_text);
-            $('.header--basket-full .dropdown .header--basket-list').html(parse_data.header_html);
-
-            block.remove();
-
-            if ($('.basket-list li').length == 0) {
-                $('.basket-full').addClass('hidden-block');
-                $('.basket-empty').removeClass('hidden-block');
-                $('.header__links-bas').addClass('empty')
-            }
-        }
-    });
-
-    return false;
-});
-
-// изменить количество товаров в корзине
-function change_basket(block) {
-    var url = block.closest('form').data('change-url');
-    var method = block.closest('form').data('method');
-    var id = block.data('id');
-    var amount = block.find('.cart-list--amount .input-number').prop('value');
-
-    $.ajax({
-        url: url,
-        method: method,
-        data: {id: id, amount: amount},
-        success: function (data) {
-            var parse_data = jQuery.parseJSON(data);
-            $('li.total .cart-list--total span').html(parse_data.total + ' руб.');
-            $('.header--basket-summ').html(parse_data.total + ' р.');
-            block.find('.cart-list--total span').html(parse_data.total_el + ' руб.');
-        }
-    });
-
-    return false;
-}
-
-
-// ввод только цифр в поле количетво
-$(document).on('keydown', '.inp-number', function () {
-    input_number();
-});
-
-// ввод только цифр в поле
-var input_number = function () {
-    var allow_meta_keys = [86, 67, 65];
-    if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 110 || event.keyCode == 191 ||
-        // Разрешаем: Ctrl+A
-        ($.inArray(event.keyCode, allow_meta_keys) > -1 && (event.ctrlKey === true || event.metaKey === true)) ||
-        // Разрешаем: home, end, влево, вправо
-        (event.keyCode >= 35 && event.keyCode <= 39)) {
-            return
-    }
-    else {
-        // Обеждаемся, что это цифра, и останавливаем событие keypress
-        if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-            event.preventDefault();
-        }
-    }
-};
-
-// ввод количества с клавиатуры
-$(document).on('input', '.cart-list .cart-list--amount .inp-number', function () {
-    var input = $(this);
-
-    if (input.data("lastval") != input.val()) {
-        if (input.val() == '') {
-            input.prop('value', 1)
-        }
-        else {
-            var value = input.prop('value');
-            value = value.replace(/\s+/g, '');
-            value = Number(value);
-            value = value.toString();
-            value = number_format(value);
-            if (value == "NaN") {
-                input.prop('value', 1)
-            } else {
-                input.prop('value', value);
-            }
-        }
-        input.data("lastval", input.val());
-
-        if (timeout_link) {
-            clearTimeout(timeout_link)
-        }
-        timeout_link = setTimeout(function () {
-            change_basket(input.closest('li'));
-        }, 250)
-
-    }
-});
-
-// формат цифр
-function number_format(str) {
-    return str.replace(/(\s)+/g, '').replace(/(\d{1,3})(?=(?:\d{3})+$)/g, '$1 ');
-}
-
-// применить скидку
-
-$(document).on('click', '.js--card-discount', function () {
-    var btn = $(this);
-    var discount_value = btn.closest('.cart-list--discount').find('.inp').prop('value');
-
-    if (discount_value != '') {
-
-        var url = btn.closest('form').data('discount-url');
-        var method = btn.closest('form').data('method');
-
-        $.ajax({
-            url: url,
-            method: method,
-            data: {value: discount_value},
-            success: function (data) {
-                var parse_data = jQuery.parseJSON(data);
-
-                if (parse_data.is_active == 'true') {
-                    $('li.total .cart-list--total span').html(parse_data.total + ' руб.');
-                    $('.header--basket-summ').html(parse_data.total + ' р.');
-                }
-                else {
-                    btn.closest('.cart-list--discount').find('.inp').addClass('error')
-                }
-            }
-        });
-    }
-
-    return false;
-});
-
-$(document).on('focus', 'input', function () {
-    $(this).removeClass('error');
-});
-
-$(document).on('click', '.js--open-history-list', function () {
-    $(this).closest('li').toggleClass('open-next').next('li').stop().slideToggle(200);
-    return false;
-})
-
-$(document).on('click', '.brends-list li img', function(){
+$(document).on('click', '.brends-list li img', function () {
     var el = $(this).closest('li');
 
-    if(el.hasClass('active')){
-        el.removeClass('active');
+    if ((device.tablet() || device.mobile()) || $(window).width() <= 992) {
+        $('.brends-content').removeClass('hidden-block').empty().append(el.find('.content-wrap .content .mCSB_container').html())
     }
     else{
-        $('.brends-list li').removeClass('active');
-        el.addClass('active');
+        if (el.hasClass('active')) {
+            el.removeClass('active');
+        }
+        else {
+            $('.brends-list li').removeClass('active');
+            el.addClass('active');
+        }
+
     }
 })
 var timeout_link; // задержка при вводе в поле
@@ -191,7 +26,7 @@ var timeout_link; // задержка при вводе в поле
 $(document).on('click', '.js--delete-item', function () {
     var btn = $(this);
     var url = btn.closest('form').data('remove-url');
-    var method = btn.closest('form').data('method');
+    var method = btn.closest('form').attr('method');
     var id = btn.closest('li').data('id');
     var block = btn.closest('li');
 
@@ -200,6 +35,7 @@ $(document).on('click', '.js--delete-item', function () {
         method: method,
         data: {id: id},
         success: function (data) {
+
             var parse_data = jQuery.parseJSON(data);
 
             var number = parse_data.total_length.toString();
@@ -219,7 +55,86 @@ $(document).on('click', '.js--delete-item', function () {
             $('.header--basket-current span').html('<i>' + parse_data.total_length + '</i>' + number_text);
             $('.header--basket-full .dropdown .header--basket-list').html(parse_data.header_html);
 
-            block.remove();
+            console.log($('.cart-list--slider').hasClass('owl-carousel'))
+
+            if($('.cart-list--slider').hasClass('owl-carousel')){
+                block.closest('.owl-item').remove();
+                owl_basket.trigger('refresh.owl.carousel');
+            }else{
+                block.remove();
+            }
+
+            if (number == 0) {
+
+                $('.cart-full').addClass('hidden-block');
+                $('.cart-empty').removeClass('hidden-block');
+
+                $('.cart-list .total .full').addClass('hidden-block');
+                $('.cart-list .total .empty').removeClass('hidden-block');
+                $('.header--basket-current').text('0 товаров');
+                $('.header--basket-summ').text('0 руб.');
+            }
+        }
+    });
+
+    return false;
+});
+
+// удалить позицию из корзины в шапке
+$(document).on('click', '.js--delete-header-item', function () {
+    var btn = $(this);
+    var url = btn.closest('ul').data('url');
+    var method = btn.closest('ul').data('method');
+    var id = btn.closest('li').data('id');
+
+    $.ajax({
+        url: url,
+        method: method,
+        data: {id: id},
+        success: function (data) {
+            var parse_data = jQuery.parseJSON(data);
+
+            $('.header--basket-full .dropdown .header--basket-list').html(parse_data.header_html);
+            $('.header--basket-full .dropdown .flex-between .value').text(parse_data.total + ' руб.');
+            $('.header--basket-summ').text(parse_data.total + ' р.');
+            $('.header--current-mobile').text(parse_data.total_length);
+
+            if($('.header--basket-full .dropdown .full ul li').length){
+                if($('.cart').length){
+                    $('.cart-list li[data-id=' + id + ']').remove();
+
+                    var number = parse_data.total_length.toString();
+                    var number_text = " товаров";
+                    number = Number(number.substr(number.length - 1, 1));
+
+                    if (number == 1) {
+                        number_text = " товар";
+                    }
+                    if (number == 2 || number == 3 || number == 4) {
+                        number_text = " товара";
+                    }
+
+                    $('.cart-list .total .cart-list--total span').html(parse_data.total + ' руб.');
+                    $('.cart-list--amount span').text(parse_data.total_length);
+
+                }
+                else{
+                    $('.cart-list .total .cart-list--total span').html(parse_data.total + ' руб.');
+                }
+
+            }
+            else{
+                $('.cart-list .total .full').addClass('hidden-block');
+                $('.cart-list .total .empty').removeClass('hidden-block');
+                $('.header--basket-current').text('0 товаров');
+                $('.header--basket-summ').text('0 руб.');
+
+                if($('.cart').length){
+                    $('.cart-full').addClass('hidden-block');
+                    $('.cart-empty').removeClass('hidden-block');
+                }
+            }
+
 
             if ($('.basket-list li').length == 0) {
                 $('.basket-full').addClass('hidden-block');
@@ -354,12 +269,16 @@ $(document).on('focus', 'input', function () {
 });
 
 $(document).on('click', '.js--open-history-list', function () {
-    $(this).closest('li').toggleClass('open-next').next('li').stop().slideToggle(200);
+    if((device.tablet() || device.mobile()) || $(window).width() >= '992'){
+        $(this).closest('.flex-between').toggleClass('open-next').next('.item--list-wrap').stop().slideToggle(200);
+    }
     return false;
-})
+});
+
+var owl_basket;
 
 $(document).ready(function () {
-    var timeout_link
+    var timeout_link;
 
     if ($('.js--select-styled').length) {
         $('.js--select-styled').styler({
@@ -367,7 +286,9 @@ $(document).ready(function () {
                 $(this).css('outline', '3px solid red');
             },
             onSelectClosed: function () {
-                if ($(this).closest('form').hasClass('filter-form')) {
+                var select = $(this);
+
+                if (select.closest('form').hasClass('filter-form')) {
                     if (timeout_link) {
                         clearTimeout(timeout_link)
                     }
@@ -375,9 +296,20 @@ $(document).ready(function () {
                         set_filter();
                     }, 1000)
                 }
+
+                if (select.parents().hasClass('condition')) {
+                    var index = select.find('option:selected').index();
+                    $('.tabs__caption li').eq(index).trigger('click');
+                }
+
+                if (select.parents().hasClass('item')) {
+                    var index = select.find('option:selected').index();
+                    $('.item--about .tabs__caption li').eq(index).trigger('click');
+                }
             }
         });
-    };
+    }
+    ;
 
     if ($('.slider').length) {
         $(".slider").each(function () {
@@ -415,7 +347,7 @@ $(document).ready(function () {
         timeout_link = setTimeout(function () {
             set_filter();
         }, 1000)
-    })
+    });
 
     $('.js--open-dropdown').click(function () {
         if ($('.dropdown-wrap.open').length && !($(this).closest('.dropdown-wrap').hasClass('open'))) {
@@ -425,12 +357,14 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.header--bottom .dropdown-wrap').hover(function () {
-            $(this).addClass('open')
-        },
-        function () {
-            $(this).removeClass('open')
-        });
+    if (device.tablet == false && device.mobile == false) {
+        $('.header--bottom .dropdown-wrap').hover(function () {
+                $(this).addClass('open')
+            },
+            function () {
+                $(this).removeClass('open')
+            });
+    }
 
     $('body').click(function (event) {
         var target = $(event.target);
@@ -442,7 +376,18 @@ $(document).ready(function () {
             $('.brends-list li').removeClass('active');
         }
 
+    });
 
+    $('.js--open-menu').click(function () {
+        var block = $(this).closest('li');
+
+        if (block.hasClass('open')) {
+            block.removeClass('open')
+        } else {
+            block.addClass('open')
+        }
+
+        return false;
     });
 
     var window_width = $(window).width();
@@ -478,24 +423,16 @@ $(document).ready(function () {
                     section.removeClass('animation-wrap')
                 }
 
-                if (window_width > 1270) {
-                    var margin_top = 350
-                    var margin_right = 114
-                    var margin_left = -540
-                }
-                if (window_width <= 1270) {
-                    var margin_top = 200
-                    var margin_right = 80
-                    var margin_left = -330
-                }
-
                 var top = section.find('.banner-content').height();
-                $('.index--slider .owl-dots').css('top', top + margin_top);
+                var offset = section.find('.banner-content').position();
+
+                $('.index--slider .owl-dots').css('top', top + offset.top + 20);
+
                 if (section.hasClass('index--slider__el-right')) {
-                    $('.index--slider .owl-dots').css('margin-left', margin_right);
+                    $('.index--slider .owl-dots').css('margin-left', offset.right);
                 }
                 else {
-                    $('.index--slider .owl-dots').css('margin-left', margin_left);
+                    $('.index--slider .owl-dots').css('margin-left', offset.left);
                 }
             },
             onTranslate: function () {
@@ -503,24 +440,15 @@ $(document).ready(function () {
 
                 var section = $('.index--slider .owl-item.active').next().find('.index--slider__el');
 
-                if (window_width > 1270) {
-                    var margin_top = 350
-                    var margin_right = 114
-                    var margin_left = -540
-                }
-                if (window_width <= 1270) {
-                    var margin_top = 200
-                    var margin_right = 80
-                    var margin_left = -330
-                }
-
                 var top = section.find('.banner-content').height();
-                $('.index--slider .owl-dots').css('top', top + margin_top);
+                var offset = section.find('.banner-content').position();
+
+                $('.index--slider .owl-dots').css('top', top + offset.top + 20);
                 if (section.hasClass('index--slider__el-right')) {
-                    $('.index--slider .owl-dots').css('margin-left', margin_right);
+                    $('.index--slider .owl-dots').css('margin-left', offset.right);
                 }
                 else {
-                    $('.index--slider .owl-dots').css('margin-left', margin_left);
+                    $('.index--slider .owl-dots').css('margin-left', offset.left);
                 }
             },
             onTranslated: function () {
@@ -550,7 +478,7 @@ $(document).ready(function () {
 
     if ($('.about-slider').length) {
         $('.about-slider').owlCarousel({
-            margin: 25,
+            margin: 0,
             loop: true,
             nav: true,
             dots: false,
@@ -561,12 +489,10 @@ $(document).ready(function () {
             items: 1,
             responsive: {
                 0: {
-                    items: 1,
-                    margin: 0
+                    items: 1
                 },
                 480: {
-                    items: 2,
-                    margin: 15
+                    items: 2
                 },
                 768: {
                     items: 3
@@ -583,7 +509,7 @@ $(document).ready(function () {
 
     if ($('.slider-discount').length) {
         $('.slider-discount').owlCarousel({
-            margin: 10,
+            margin: 0,
             loop: true,
             nav: false,
             dots: true,
@@ -598,11 +524,11 @@ $(document).ready(function () {
                     margin: 0
                 },
                 480: {
-                    items: 2,
+                    items: 1,
                     margin: 15
                 },
                 768: {
-                    items: 3
+                    items: 1
                 },
                 992: {
                     items: 3
@@ -628,19 +554,30 @@ $(document).ready(function () {
             responsive: {
                 0: {
                     items: 1,
-                    margin: 0
+                    margin: 0,
+                    dots: false,
+                    nav: true
                 },
                 480: {
-                    items: 2
+                    items: 2,
+                    dots: false,
+                    nav: true
                 },
                 768: {
-                    items: 2
+                    items: 3,
+                    dots: false,
+                    nav: true
+
                 },
                 992: {
-                    items: 3
+                    items: 4,
+                    dots: false,
+                    nav: true
                 },
                 1270: {
-                    items: 4
+                    items: 4,
+                    dots: false,
+                    nav: true
                 }
             }
         });
@@ -665,13 +602,44 @@ $(document).ready(function () {
                     items: 3
                 },
                 768: {
-                    items:4
+                    items: 4
                 },
                 992: {
-                    items: 5
+                    items: 6
                 },
                 1270: {
                     items: 6
+                }
+            }
+        });
+    }
+
+
+    if ($('.cart-list--slider').length && ((device.tablet() || device.mobile()) || $(window).width() <= 992)) {
+        owl_basket = $('.cart-list--slider');
+
+        owl_basket.owlCarousel({
+            margin: 0,
+            loop: false,
+            nav: true,
+            dots: false,
+            navText: [,],
+            autoplay: false,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            items: 2,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                480: {
+                    items: 2
+                },
+                550: {
+                    items: 3
+                },
+                768: {
+                    items: 4
                 }
             }
         });
@@ -800,11 +768,6 @@ $(document).ready(function () {
             .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
     });
 
-    if ($('.nano').length) {
-        $('.nano').mCustomScrollbar({
-            theme: "minimal"
-        });
-    }
 });
 
 function set_filter() {
@@ -825,6 +788,21 @@ function set_filter() {
 
     return false;
 }
+
+$(document).on('click', '.js--mobile-menu', function () {
+    $('.header--bottom').toggleClass('is_open');
+    $(this).toggleClass('is_open');
+    $('.header').toggleClass('fixed');
+    return false;
+});
+
+$(document).on('click', '.js--change-category', function () {
+    var val = $(this).text();
+    $('.change-category input').val(val);
+    $('.dropdown-wrap.open').removeClass('open');
+
+    return false;
+});
 // удалить дисконтную карту
 $(document).on('click', '.js--lk-remove-discount', function () {
     var btn = $(this);
