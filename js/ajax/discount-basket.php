@@ -1,4 +1,4 @@
 {
     "is_active": "true",
-    "total": "100 000"
+    "total_summ": "100 000"
 }
